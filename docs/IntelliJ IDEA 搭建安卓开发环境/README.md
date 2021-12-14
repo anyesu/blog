@@ -32,7 +32,7 @@
 
 - 我在 **IntelliJ IDEA** 上安装了很多插件并做了较多配置，不想再重复一遍。而且能共用一个 **IDE** 也能节省很多磁盘空间。
 
-- 我在 **IntelliJ IDEA** 上本来就做多种语言的开发：**前端** 、 **Java 后端** 、 **脚本语言（ Bat / Shell / Python ）** 等，能多一个安卓那自然是更好的。
+- 我在 **IntelliJ IDEA** 上本来就做多种语言的开发： **前端** 、 **Java 后端** 、 **脚本语言（ Bat / Shell / Python ）** 等，能多一个安卓那自然是更好的。
 
 理论上这个方案是没问题的，我实际开发也还没遇到过因为 **IntelliJ IDEA** 自身原因导致的问题。所以，不要无脑听别人说用什么就用什么，有疑惑就多试试。团队开发中，没能力还是建议使用团队统一的 **IDE** 。
 
@@ -46,6 +46,9 @@
 # 设置 Android SDK 安装目录的路径
 # ref: https://developer.android.google.cn/studio/command-line/variables?hl=en
 ANDROID_SDK_ROOT=E:\Android\SDK
+
+# ANDROID_HOME 也指向 SDK 安装目录，但已弃用，只是为了兼容 AGP < 3.4.0
+ANDROID_HOME=%ANDROID_SDK_ROOT%
 
 # 注意和 ANDROID_SDK_ROOT 的区别，一般这个变量代表安卓模拟器配置文件目录的父目录
 # adb 估计写死了路径， ${user.home}/.android/adbkey 无法根据这个变量迁移
@@ -289,6 +292,7 @@ Path=%ANDROID_SDK_ROOT%\platform-tools;%Path%
                   if (parts.size > 3) parts.removeAt(3) // 去除随机值
                   path = parts.joinToString("/")
               }
+              duplicatesStrategy = DuplicatesStrategy.EXCLUDE // 重复文件策略
               includeEmptyDirs = false
           }
       }
@@ -355,6 +359,7 @@ Path=%ANDROID_SDK_ROOT%\platform-tools;%Path%
 
   initscript {
       repositories {
+          mavenLocal()
           gradlePluginPortal()
       }
 
@@ -388,7 +393,7 @@ Path=%ANDROID_SDK_ROOT%\platform-tools;%Path%
           group = GROUP_NAME
           rejectVersionIf {
               !currentVersion.isNonStable && candidate.version.isNonStable ||
-                      currentVersion.startsWithV && !candidate.version.startsWithV
+                  currentVersion.startsWithV && !candidate.version.startsWithV
           }
       }
   }
@@ -416,7 +421,7 @@ Path=%ANDROID_SDK_ROOT%\platform-tools;%Path%
   > - **Minimum supported Gradle version is 7.0.2.**
   > - **IntelliJ IDEA (or Android Studio) with version 2020.3.1 or newer.**
 
-  当然，也可以进设置页面自定义选择 **SDK** 版本进行安装（ [参考](https://developer.android.google.cn/studio/intro/update) ），**API 19 +** 可以兼容目前大部分的项目和手机。
+  当然，也可以进设置页面自定义选择 **SDK** 版本进行安装（ [参考](https://developer.android.google.cn/studio/intro/update) ）， **API 19 +** 可以兼容目前大部分的项目和手机。
 
   ![Android SDK 设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/IntelliJ%20IDEA%20搭建安卓开发环境/imgs/settings_android_sdk.png)
 
@@ -499,6 +504,10 @@ Path=%ANDROID_SDK_ROOT%\platform-tools;%Path%
 
   一键生成 **proguard-rules.pro** 中的混淆配置，仅供参考。
 
+- [AndroidSourceViewer](https://plugins.jetbrains.com/plugin/10187-androidsourceviewer)
+
+  在线查看 **Android** 源码的插件。
+
 - [Android WiFiADB](https://plugins.jetbrains.com/plugin/13156-android-wifiadb)
 
   支持手动输入 **IP** 和端口进行连接，支持扫描局域网可用设备，设备列表会持久化而不丢失。
@@ -543,7 +552,7 @@ Path=%ANDROID_SDK_ROOT%\platform-tools;%Path%
 
   集成 [Jadx GUI](https://github.com/skylot/jadx) ，一个 **Dex** 到 **Java** 的反编译器，可在项目文件（ apk, dex, jar, class, smali, zip, aar, arsc ）视图中右键选择 **在 Jadx GUI 中反编译** 。
 
-  > **Jadx** 是目前我用过最好用的、最傻瓜式的 **APK 反编译器** ，不过需要设置好内存参数 `-Xmx`（ [参考](https://github.com/skylot/jadx/wiki/Troubleshooting-Q&A) ），不然随便多开几个就能撑爆你的内存。
+  > **Jadx** 是目前我用过最好用的、最傻瓜式的 **APK 反编译器** ，不过需要设置好内存参数 `-Xmx` （ [参考](https://github.com/skylot/jadx/wiki/Troubleshooting-Q&A) ），不然随便多开几个就能撑爆你的内存。
 
 - [Material Design Icon Generator](https://plugins.jetbrains.com/plugin/14170-material-design-icon-generator)
 
@@ -628,21 +637,21 @@ Path=%ANDROID_SDK_ROOT%\platform-tools;%Path%
 
 - [使用布局检查器和布局验证工具调试布局](https://developer.android.google.cn/studio/debug/layout-inspector) （ [参考](https://blog.csdn.net/cadi2011/article/details/85212762) ）
 
-  > **View -> Tool Windows -> Layout Inspector**（ 仅安卓项目可见 ）
+  > **View -> Tool Windows -> Layout Inspector** （ 仅安卓项目可见 ）
 
   要启用实时刷新要安装 **Layout Inspector image server for xxx** 。（ 使用时应该会自动安装 ）
 
 - [使用 Database Inspector 调试数据库](https://developer.android.google.cn/studio/inspect/database) （ [参考](https://www.jetbrains.com/help/idea/accessing-android-sqllite-databases-from-product.html) ）
 
-  > **View -> Tool Windows -> [App Inspection] -> Database Inspector**（ 仅安卓项目可见 ）
+  > **View -> Tool Windows -> [App Inspection] -> Database Inspector** （ 仅安卓项目可见 ）
 
 - [使用后台任务检查器调试 WorkManager 工作器](https://developer.android.google.cn/studio/inspect/task) （ `Android Studio Arctic Fox+` ）
 
-  > **View -> Tool Windows -> App Inspection -> Background Task Inspector**（ 仅安卓项目可见 ）
+  > **View -> Tool Windows -> App Inspection -> Background Task Inspector** （ 仅安卓项目可见 ）
 
 - [使用设备文件浏览器查看设备上的文件](https://developer.android.google.cn/studio/debug/device-file-explorer)
 
-  > **View -> Tool Windows -> Device File Explorer**（ 仅安卓项目可见 ）
+  > **View -> Tool Windows -> Device File Explorer** （ 仅安卓项目可见 ）
 
   修改默认的文件下载目录：
 
@@ -674,6 +683,50 @@ Path=%ANDROID_SDK_ROOT%\platform-tools;%Path%
 
   > **Tools -> External Tools -> xxx**
 
+### 常见错误
+
+---
+
+- 找不到 **SDK**
+
+  > **SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.**
+
+  **Android Studio** 在同步 **Gradle** 前会自动创建 [local.properties](https://developer.android.google.cn/studio/build#properties-files) 文件，而 **IntelliJ IDEA** 不会。
+
+  为了避免每次打开新项目要手动创建，可以添加一个环境变量 `ANDROID_HOME` （ [参考](#配置环境变量) ）。
+
+- 使用老旧 **Gradle** 的项目（ [比如](https://github.com/EdwardSituwende/WeChatAutomationUtil/tree/b17d777b003aedbf6b69ecd2ba6b849ebd79d384) ）构建失败
+
+  > **Executing tasks: [:app:assembleDebug] in project ...**
+  >
+  > **Gradle build failed with 1 error(s) in 24 ms**
+
+  找不到任何更多的错误信息，而且手动跑命令是完全没问题的。
+
+  ```shell
+  # gradlew :app:assembleDebug
+
+  BUILD SUCCESSFUL in 0s
+  25 actionable tasks: 1 executed, 24 up-to-date
+  ```
+
+  测试了 **Android Studio ( Arctic Fox | 2020.3.1 )** 和 **IntelliJ IDEA 2020.3** 都没问题，但 **IntelliJ IDEA 2021.x** 全都不行。
+
+  **临时解决方案** ：构建步骤使用 **Gradle** 命令代替 `Gradle-aware Make` 。（ [参考](https://developer.android.google.cn/studio/run/rundebugconfig#definingbefore) ）
+
+  > **Edit Configurations -> Android App -> app -> Before launch**
+
+  ```diff
+  - Gradle-aware Make
+  + Run Gradle task :app:assembleDebug
+  ```
+
+  如果继续报错，可以考虑把安装步骤也替换了。（ [参考](https://blog.csdn.net/lzllzllhl/article/details/109468320) ）
+
+  > **ApkProvisionException: No outputs for the main artifact of variant: debug**
+
+  - [Android Studio 'Run' 按钮后面的秘密](https://www.jianshu.com/p/adc5cc0ee843)
+
 ### 学习资料
 
 ---
@@ -688,4 +741,4 @@ Path=%ANDROID_SDK_ROOT%\platform-tools;%Path%
 
 ---
 
-#### 转载请注明出处：[https://github.com/anyesu/blog/issues/39](https://anyesu.github.io/blog/articles/39)
+#### 转载请注明出处： [https://github.com/anyesu/blog/issues/39](https://anyesu.github.io/blog/articles/39)
