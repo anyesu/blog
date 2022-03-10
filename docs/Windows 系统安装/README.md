@@ -20,15 +20,15 @@
 
 这里推荐两种方式进行安装：
 
-#### 使用微软官方工具 [media creation tool](https://www.microsoft.com/zh-cn/software-download/windows10) 制作系统安装 U 盘 。
+#### 使用微软官方工具 [media creation tool](https://www.microsoft.com/zh-cn/software-download/windows10) 制作系统安装 U 盘
 
-> 直接 **百度 - 下载 win10** 即可，注意选带 **`[官方]`** 认证标记的链接。
+> 直接 **百度 - 下载 win10** 即可，注意选带 **`[官方]`** 认证小尾巴的链接。
 
 这是官方方案，可以保证绝对的安全可靠，操作过程也比较简单，适合新手。缺点的话就是不够灵活，只能安装最新版本的系统而不能指定版本，而且每次制作要重新下载相对比较耗时。
 
 ![media creation tool 主要步骤](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/media_creation_tool_steps.png)
 
-#### 制作 PE 系统 ，在 PE 中使用 Windows 官方镜像完成安装。
+#### 制作 PE 系统 ，在 PE 中使用 Windows 官方镜像完成安装
 
 > [Windows PE (WinPE)](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/winpe-intro) 是一个小型操作系统，用于安装、部署和修复 Windows 10 桌面版（家庭版、专业版、企业版和教育版）、Windows Server 和其他 Windows 操作系统。 通过 Windows PE，你可以：
 >
@@ -80,29 +80,29 @@
 
 #### 下载官方原版镜像
 
-- [MSDN, 我告诉你](https://msdn.itellyou.cn)
+##### [MSDN, 我告诉你](https://msdn.itellyou.cn)
 
-  一个个人维护的非微软官方网站，但几乎能下载到各个主要版本的 **Windows 镜像** ，也是大家都比较推荐的一个良心网站。要说缺点的话就是下载方式是 [ed2k](https://baike.baidu.com/item/ed2k) 协议的，国内支持的软件估计只有垃圾迅雷了吧（ [闪电下载](http://bbs.xiaokanba.com/download.html) 其实也可以 ）。目前这个网站 [新版](https://next.itellyou.cn) 开放测试，支持 [BT 下载](https://baike.baidu.com/item/BT%E4%B8%8B%E8%BD%BD) ，可以使用 [Xdown](http://xdown.org) 这个工具进行下载，当然 [P2P 技术](https://baike.baidu.com/item/%E5%AF%B9%E7%AD%89%E7%BD%91%E7%BB%9C) 嘛，下载速度就时快时慢了，看缘分。
+一个个人维护的非微软官方网站，但几乎能下载到各个主要版本的 **Windows 镜像** ，也是大家都比较推荐的一个良心网站。要说缺点的话就是下载方式是 [ed2k](https://baike.baidu.com/item/ed2k) 协议的，国内支持的软件估计只有垃圾迅雷了吧（ [闪电下载](http://bbs.xiaokanba.com/download.html) 其实也可以 ）。目前这个网站 [新版](https://next.itellyou.cn) 开放测试，支持 [BT 下载](https://baike.baidu.com/item/BT%E4%B8%8B%E8%BD%BD) ，可以使用 [Xdown](http://xdown.org) 这个工具进行下载，当然 [P2P 技术](https://baike.baidu.com/item/%E5%AF%B9%E7%AD%89%E7%BD%91%E7%BB%9C) 嘛，下载速度就时快时慢了，看缘分。
 
-  下载完成后推荐使用 [iHasher](https://share.weiyun.com/5gtDK6E) 进行 [SHA1](https://baike.baidu.com/item/SHA-1) 校验，即使是别处下载的镜像也可以在线对比获取版本信息。
+下载完成后推荐使用 [iHasher](https://share.weiyun.com/5gtDK6E) 进行 [SHA1](https://baike.baidu.com/item/SHA-1) 校验，即使是别处下载的镜像也可以在线对比获取版本信息。
 
-  ![iHasher 校验](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iHasher_verify.png)
+![iHasher 校验](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iHasher_verify.png)
 
-- **media creation tool**
+##### media creation tool
 
-  官方工具不仅用于制作启动盘，还可以只下载 **ISO 镜像** （ 仅包含有限版本 ），速度非常快，我 **100 M** 的电信宽带基本上能跑满 **10 MB/s** ，等待十几分钟即可。
+官方工具不仅用于制作启动盘，还可以只下载 **ISO 镜像** （ 仅包含有限版本 ），速度非常快，我 **100 M** 的电信宽带基本上能跑满 **10 MB/s** ，等待十几分钟即可。
 
-  [Windows 11 官网页面](https://www.microsoft.com/zh-cn/software-download/windows11) 直接提供了下载链接（ 包含完整版本 ），借助 [IDM](http://www.internetdownloadmanager.com) + **HTTP 代理** 下载速度也很快。
+[Windows 11 官网页面](https://www.microsoft.com/zh-cn/software-download/windows11) 直接提供了下载链接（ 包含完整版本 ），借助 [IDM](http://www.internetdownloadmanager.com) + **HTTP 代理** 下载速度也很快。
 
-  > **MediaCreationTool** 的下载目录为 `%SystemDrive%\ESD\Download` ，每次执行都会重新下载临时文件，即使把中间产物 `installx64.esd` 备份后再直接放到这个路径下还是会重新下载。`installx64.esd` 的后加工产物临时文件在 `%SystemDrive%\$Windows.~WS\Sources` 目录下，安装完成后会自动清除。
+> **MediaCreationTool** 的下载目录为 `%SystemDrive%\ESD\Download` ，每次执行都会重新下载临时文件，即使把中间产物 `installx64.esd` 备份后再直接放到这个路径下还是会重新下载。`installx64.esd` 的后加工产物临时文件在 `%SystemDrive%\$Windows.~WS\Sources` 目录下，安装完成后会自动清除。
 
-- [微 PE 下载页](http://www.wepe.com.cn/download.html)
+##### [微 PE 下载页](http://www.wepe.com.cn/download.html)
 
-  提供最新版系统的下载链接。
+提供最新版系统的下载链接。
 
-- 我在 [Lumia 950 XL 刷入 Windows 10 ARM 体验](https://www.jianshu.com/p/1a336b3053f4) 一文中用到的下载 **ARM 镜像** 的方法
+##### 下载 ARM 镜像的方法
 
-  使用脚本下载文件并转换为 **ISO 镜像** ，不过可能会无法下载。
+我在 [Lumia 950 XL 刷入 Windows 10 ARM 体验](https://www.jianshu.com/p/1a336b3053f4) 一文中用到过的，使用脚本下载文件并转换为 **ISO 镜像** ，不过可能会无法下载。
 
 **不要去那些乱七八糟的下载站下载。**
 
@@ -140,95 +140,110 @@
 
 ---
 
-不管上面的安装方式如何选择，始终会进入到这一步骤，现在才真正开始安装系统。
+除了升级安装特殊一点，一般自定义安装都会进入到下面的步骤，现在才真正开始安装系统。
 
-- 主界面。
+##### 主界面
 
-  ![安装 - 0](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_0.png)
+![安装 - 0](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_0.png)
 
-  ![安装 - 1](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_1.png)
+![安装 - 1](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_1.png)
 
-- 通常选择 **我没有产品密钥** ，之后系统安装完成了再进行 **激活** 。
+##### 通常选择我没有产品密钥，之后系统安装完成了再进行激活
 
-  > 如果你使用的是链接到 Microsoft 帐户的数字许可证，则可以通过选择“我没有产品密钥”来运行安装程序并跳过产品密钥选项。 当你使用 Microsoft 帐户登录并连接到 Internet 时，则会被激活。
+> 如果你使用的是链接到 **Microsoft** 帐户的数字许可证，则可以通过选择“我没有产品密钥”来运行安装程序并跳过产品密钥选项。 当你使用 **Microsoft** 帐户登录并连接到 **Internet** 时，则会被激活。
 
-  ![安装 - 2](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_2.png)
+![安装 - 2](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_2.png)
 
-- 选择要安装的版本。
+##### 选择要安装的版本
 
-  **家庭版** 在功能上有所阉割，一般选择 **专业版** 即可，至于 **教育版** 和 **工作站版** 非专业用户也感觉不出什么区别。
+**家庭版** 在功能上有所阉割，一般选择 **专业版** 即可，至于 **教育版** 和 **工作站版** 非专业用户也感觉不出什么区别。
 
-  **当然，还是要取决于你的密钥或数字证书能激活哪个版本的系统，不能激活也是白瞎。**
+**当然，还是要取决于你的密钥或数字证书能激活哪个版本的系统，不能激活也是白瞎。**
 
-  ![安装 - 3](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_3.png)
+![安装 - 3](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_3.png)
 
-- 勾选 **我接受许可条款** （ 快捷键 - **空格键** ）后点击 **下一步** 。
+##### 勾选我接受许可条款后点击下一步
 
-  ![安装 - 4](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_4.png)
+> 勾选快捷键 - 空格键
 
-- 选择 **自定义：仅安装 Windows（高级）** 。
+![安装 - 4](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_4.png)
 
-  至于升级选项我自己是从来没用过的，升级后数据和设置能保留到什么程度不得而知，手动备份重要的用户数据还是很有必要的。
+##### 选择自定义：仅安装 Windows（高级）
 
-  ![安装 - 5](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_5.png)
+至于升级选项我自己是从来没用过的，升级后数据和设置能保留到什么程度不得而知，手动备份重要的用户数据还是很有必要的。
 
-- 选择用于安装系统的分区。
+![安装 - 5](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_5.png)
 
-  点击 **下一步** 安装程序会自动进行分区，但新硬盘最好还是使用 [分区工具](#分区工具) 进行 **快速分区** 。
+##### 选择用于安装系统的分区
 
-  ![安装 - 6](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_6.png)
+点击 **下一步** 安装程序会自动进行分区，但新硬盘最好还是使用 [分区工具](#分区工具) 进行 **快速分区** 。
 
-  > 如果是在选中分区上重装系统的话，建议先格式化对应分区，不然系统安装完成后还是要去手动清理 **Windows.old** 。
+![安装 - 6](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_6.png)
 
-  > 另外，看了很多视频都喜欢在这一步删除分区，在这么简单的界面下执行这个高危的操作我是不认同的，建议到 **PE** 中确认分区内容后再用 **分区工具** 进行重新分区。
-  >
-  > 怕选错磁盘可以先卸载不相关的磁盘：磁盘管理 -> 选中磁盘右键属性 -> 驱动程序 -> 卸载设备。
+> 如果是在选中分区上重装系统的话，建议先格式化对应分区，不然系统安装完成后还是要去手动清理 **Windows.old** 。
 
-  一般无法安装系统的情况都是卡在这一步，我主要碰到过以下几类错误：
+> 另外，看了很多视频都喜欢在这一步删除分区，在这么简单的界面下执行这个高危的操作我是不认同的，建议到 **PE** 中确认分区内容后再用 **分区工具** 进行重新分区。
+>
+> 怕选错磁盘可以先卸载不相关的磁盘：磁盘管理 -> 选中磁盘右键属性 -> 驱动程序 -> 卸载设备。
 
-  - 磁盘分区空间不足
+##### 一般无法继续安装系统的几类错误
 
-    一般推荐分区大小至少 **60 GB** ，有些软件只能安装到系统盘（ 比如 **Visual Studio** ），初始空间分配太小了后面再调整就麻烦了，微信聊天记录比较多（ 我曾经见过微信数据超过 **60 GB** 的 ... ）的朋友可以再适当加大一些。
+- 磁盘分区空间不足
 
-    ![错误 - 磁盘分区空间不足](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_1.png)
+  一般推荐分区大小至少 **60 GB** ，有些软件只能安装到系统盘（ 比如 **Visual Studio** ），初始空间分配太小了后面再调整就麻烦了，微信聊天记录比较多（ 我曾经见过微信数据超过 **60 GB** 的 ... ）的朋友可以再适当加大一些。
 
-  - 磁盘分区格式不对（ [参考](https://answers.microsoft.com/zh-hans/windows/forum/all/win10%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E9%97%AE/d724cf43-b1c8-4379-ac33-788af0b74003) ）
+  自从加装至 **48 G** 内存后忽然发现 **C** 盘快满了，其中 **C:\hiberfil.sys** 这个文件占了 **20 G** ，一查是休眠功能用到的，以前内存小的时候不打紧，现在内存大了就跟着膨胀了。
 
-    ![错误 - 磁盘分区格式不对](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_2.png)
+  **解决办法：平时关闭休眠功能，需要的时候再打开。**
 
-    **磁盘分区格式** 和 **BIOS 启动模式** 是有对应关系的，通常是 [**MBR + Legacy**](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions) 和 [**GPT + UEFI**](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions) 两种组合，显而易见要解决这个错误无非就是修改 **磁盘分区格式** 或者 **BIOS 启动模式** ，更多详情见 [文末](#BIOS-启动模式) 。
+  ```powershell
+  # 需要管理员权限，可以建两个快捷方式快速执行
+  # 禁用休眠
+  powercfg -h off
 
-    > 一般重装系统的话还是建议修改 **BIOS 启动模式** 而不是 **磁盘分区格式** ，以避免不必要的数据损坏。新装还是推荐 **GPT + UEFI** 的组合，毕竟这才是未来的趋势。
+  # 启用休眠
+  powercfg -h on
+  ```
 
-  - 缺少 **ESP/MSR 分区**
+  ![错误 - 磁盘分区空间不足](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_1.png)
 
-    ![错误 - 缺少 ESP/MSR 分区](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_3.png)
+- 磁盘分区格式不对（ [参考](https://answers.microsoft.com/zh-hans/windows/forum/all/win10%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E9%97%AE/d724cf43-b1c8-4379-ac33-788af0b74003) ）
 
-    这种情况是我在把 **MBR** 硬盘简单转为 **GPT** 后出现的，原因是缺少 **ESP/MSR 分区** 。
+  ![错误 - 磁盘分区格式不对](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_2.png)
 
-    **解决办法：** 磁盘先释放出一部分 **未使用空间** （ 一般 **300 MB** 够用了 ），刷新当前界面即可继续下一步，安装程序会自动建立或者修复 **ESP/MSR 分区** 。
+  **磁盘分区格式** 和 **BIOS 启动模式** 是有对应关系的，通常是 [**MBR + Legacy**](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions) 和 [**GPT + UEFI**](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions) 两种组合，显而易见要解决这个错误无非就是修改 **磁盘分区格式** 或者 **BIOS 启动模式** ，更多详情见 [文末](#BIOS-启动模式) 。
 
-  - 无法安装到移动硬盘
+  > 一般重装系统的话还是建议修改 **BIOS 启动模式** 而不是 **磁盘分区格式** ，以避免不必要的数据损坏。新装还是推荐 **GPT + UEFI** 的组合，毕竟这才是未来的趋势。
 
-    ![错误 - 无法安装到移动硬盘](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_4.png)
+- 缺少 **ESP/MSR 分区**
 
-  - 以前装机的时候还遇到过其他问题，一时想不起来了，以后遇到了再补充。
+  ![错误 - 缺少 ESP/MSR 分区](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_3.png)
 
-- 拷贝文件和安装
+  这种情况是我在把 **MBR** 硬盘简单转为 **GPT** 后出现的，原因是缺少 **ESP/MSR 分区** 。
 
-  ![安装 - 7](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_7.png)
+  **解决办法：** 磁盘先释放出一部分 **未使用空间** （ 一般 **300 MB** 够用了 ），刷新当前界面即可继续下一步，安装程序会自动建立或者修复 **ESP/MSR 分区** 。
 
-  > `正在复制 Windows 文件` 在 **Windows** 下还要花点时间，在 **PE** 下秒过（ 应该是省去了拷贝到临时目录的步骤 ）。
+- 无法安装到移动硬盘
 
-  安装完成就会自动重启几遍进入初始化设置界面 （ **海内存知己，天涯若比邻** ），这里用时一般 **几分钟** 到 **几小时** 不等，取决于你的硬盘写入速度。
+  ![错误 - 无法安装到移动硬盘](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_4.png)
 
-  ![海内存知己，天涯若比邻](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/windows_setup.png)
+- 以前装机的时候还遇到过其他问题，一时想不起来了，以后遇到了再补充。
 
-  后面就没什么好讲的，一步一步设置就好了，**请坐和放宽** 。建议这里插网线并登录 **微软账户** ，之后直接自动下载驱动一步到位。
+##### 拷贝文件和安装
 
-  > **注意**
-  >
-  > 如果之前在 **BIOS** 中修改了 **启动顺序** ，重启的时候记得拔 **U 盘** 或者把 **启动顺序** 改回去。
+![安装 - 7](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_7.png)
+
+> `正在复制 Windows 文件` 在 **Windows** 下还要花点时间，在 **PE** 下秒过（ 应该是省去了拷贝到临时目录的步骤 ）。
+
+之后会自动重启几遍进入初始化设置界面（ **海内存知己，天涯若比邻** ），这里用时一般 **几分钟** 到 **几小时** 不等，取决于你硬盘的读写速度。
+
+![海内存知己，天涯若比邻](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/windows_setup.png)
+
+后面就没什么好讲的，一步一步设置就好了，**请坐和放宽** 。建议这里插网线并登录 **微软账户** ，之后直接自动下载驱动一步到位。
+
+> **注意**
+>
+> 如果之前在 **BIOS** 中修改了 **启动顺序** ，重启的时候记得拔 **U 盘** 或者把 **启动顺序** 改回去。
 
 ### 系统初始化工作
 
@@ -259,283 +274,291 @@
 
 #### 资源管理器设置
 
-- 打开 **文件资源管理器** 时打开 **此电脑** 而不是 **快速访问** 。
+##### 打开文件资源管理器时打开此电脑而不是快速访问
 
-  ![资源管理器设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/config_explorer.png)
+![资源管理器设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/config_explorer.png)
 
-- 启用 **预览窗格** ，直接在窗口右侧预览文件而无需打开。
+##### 启用预览窗格
 
-- 显示 **文件扩展名** 和 **隐藏的项目** 。（ **可选** ）
+直接在窗口右侧预览文件而无需打开。
 
-- 在 **快速访问** 中不显示 **最近访问的内容** 以保护隐私。
+##### 显示文件扩展名和隐藏的项目（ 可选 ）
 
-  ![软媒魔方 - 清理隐私](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/PCMaster_cleanmaster.png)
+##### 在快速访问中不显示最近访问的内容
 
-- **资源管理器** 添加常用 **右键菜单** 。
+保护隐私。
 
-  ![软媒魔方 - 设置大师](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/PCMaster_winmaster.png)
+![软媒魔方 - 清理隐私](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/PCMaster_cleanmaster.png)
 
-- 删除文件时显示 **确认对话框** 。
+##### 资源管理器添加常用右键菜单
 
-  ![回收站属性设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/RecycleBin.png)
+![软媒魔方 - 设置大师](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/PCMaster_winmaster.png)
 
-- [Quick Look](https://github.com/QL-Win/QuickLook) - 像 **macOS** 一样通过空格键预览文件内容。[插件](https://github.com/QL-Win/QuickLook/wiki/Available-Plugins) ：
+##### 删除文件时显示确认对话框
 
-  - [ApkViewer](https://github.com/canheo136/QuickLook.Plugin.ApkViewer) - 预览 **安卓 APK** 。
-  - [OfficeViewer-Native](https://github.com/QL-Win/QuickLook.Plugin.OfficeViewer-Native) - 预览 **Office 文件** 。
+![回收站属性设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/RecycleBin.png)
 
-- 额外的文件预览
+##### [Quick Look](https://github.com/QL-Win/QuickLook)
 
-  - [SVG Viewer Extension for Windows Explorer](https://github.com/tibold/svg-explorer-extension) - 安装完无需设置即可自动支持 **SVG** 预览。
+像 **macOS** 一样通过空格键预览文件内容，[插件](https://github.com/QL-Win/QuickLook/wiki/Available-Plugins) ：
 
-  - [PowerToys](https://github.com/microsoft/PowerToys) - 支持 **Markdown** 、 **SVG** 和 **PDF** 。
+- [ApkViewer](https://github.com/canheo136/QuickLook.Plugin.ApkViewer) - 预览 **安卓 APK** 。
+- [OfficeViewer-Native](https://github.com/QL-Win/QuickLook.Plugin.OfficeViewer-Native) - 预览 **Office 文件** 。
 
-    ![PowerToys - 设置文件预览](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/PowerToys.png)
+##### 额外的文件预览
+
+- [SVG Viewer Extension for Windows Explorer](https://github.com/tibold/svg-explorer-extension) - 安装完无需设置即可自动支持 **SVG** 预览。
+
+- [PowerToys](https://github.com/microsoft/PowerToys) - 支持 **Markdown** 、 **SVG** 和 **PDF** 。
+
+  ![PowerToys - 设置文件预览](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/PowerToys.png)
 
 #### 美化
 
 ![桌面整体效果](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/desktop_final.jpg)
 
-- 壁纸
+##### 壁纸设置
 
-  > 桌面右键 > 个性化
+> 桌面右键 > 个性化
 
-  [必应壁纸](https://www.microsoft.com/zh-cn/bing/bing-wallpaper) - 将桌面壁纸同步为 [必应搜索](https://bing.com) 网站的每日壁纸。
+- [必应壁纸](https://www.microsoft.com/zh-cn/bing/bing-wallpaper) - 将桌面壁纸同步为 [必应搜索](https://bing.com) 网站的每日壁纸。
 
-  [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine) - 酷炫的壁纸效果，可交互，资源丰富。（ 比较吃显卡 ）
+- [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine) - 酷炫的壁纸效果，可交互，资源丰富。（ 比较吃显卡 ）
 
-  [删除 Win10 背景图片（壁纸）历史记录](https://answers.microsoft.com/zh-hans/windows/forum/all/answers/ff6e02c1-b329-4faf-99ae-e2fd1b65fc6f)
+[删除 Win10 背景图片（壁纸）历史记录](https://answers.microsoft.com/zh-hans/windows/forum/all/answers/ff6e02c1-b329-4faf-99ae-e2fd1b65fc6f)
 
-  ```ini
-  HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers
-  ```
+```ini
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers
+```
 
-- 桌面图标设置
+##### 桌面图标设置
 
-  ![设置桌面图标](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/desktop_icons.png)
+![设置桌面图标](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/desktop_icons.png)
 
-- [ModernFlyouts](https://github.com/ModernFlyouts-Community/ModernFlyouts)
+##### [ModernFlyouts](https://github.com/ModernFlyouts-Community/ModernFlyouts)
 
-  用于将旧的 **Windows 8 Metro** 风格弹窗覆盖为 **Fluent Design** 风格弹窗。
+用于将旧的 **Windows 8 Metro** 风格弹窗覆盖为 **Fluent Design** 风格弹窗。
 
-  ![ModernFlyouts](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/ModernFlyouts.png)
+![ModernFlyouts](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/ModernFlyouts.png)
 
-- [任务栏图标居中](https://jingyan.baidu.com/article/d8072ac4689a1dec95cefdfd.html)
+##### [任务栏图标居中](https://jingyan.baidu.com/article/d8072ac4689a1dec95cefdfd.html)
 
-  个人觉得 **仿 Dock 栏** 和 **Windows** 风格很不搭，显得不伦不类，简单居中图标就行了，而且 [Windows 11](https://www.microsoft.com/zh-cn/windows/windows-11) 默认支持居中了。
+个人觉得 **仿 Dock 栏** 和 **Windows** 风格很不搭，显得不伦不类，简单居中图标就行了，而且 [Windows 11](https://www.microsoft.com/zh-cn/windows/windows-11) 默认支持居中了。
 
-- 隐藏默认的任务栏图标
+##### 隐藏默认的任务栏图标
 
-  ![任务栏 - 图标](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/taskbar_icons.png)
+![任务栏 - 图标](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/taskbar_icons.png)
 
-- 添加 **工具栏**
+##### 添加工具栏
 
-  我桌面上不放 **快捷方式** ，所有 **常用软件** 的 **快捷方式** 统一放到一个目录下，再添加到 **任务栏** 的 **工具栏** 中，效果类似精简版的旧版开始菜单。
+我桌面上不放 **快捷方式** ，所有 **常用软件** 的 **快捷方式** 统一放到一个目录下，再添加到 **任务栏** 的 **工具栏** 中，效果类似精简版的旧版开始菜单。
 
-  ![任务栏 - 工具栏](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/taskbar_toolbar.png)
+![任务栏 - 工具栏](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/taskbar_toolbar.png)
 
-- 透明任务栏
+##### 透明任务栏
 
-  曾经用过 **StartIsBack** ，功能也挺强大，但和系统会产生冲突就弃用了。
+曾经用过 **StartIsBack** ，功能也挺强大，但和系统会产生冲突就弃用了。
 
-  最新找到一个新的工具 [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB) ，能设置透明，但桌面壁纸要好好选，不然更丑。
+最新找到一个新的工具 [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB) ，能设置透明，但桌面壁纸要好好选，不然更丑。
 
-- [XMeters](https://entropy6.com/xmeters) - 任务栏监控。
+##### [XMeters](https://entropy6.com/xmeters)
 
-  ![xmeters](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/xmeters.png)
+任务栏监控。
 
-- 其他美化资源
+![xmeters](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/xmeters.png)
 
-  - [Windows 10 深度美化有什么技巧?](https://www.zhihu.com/question/39002007)
-  - [致美化 - 最专业的桌面美化交流平台](https://zhutix.com)
+##### 其他美化资源
+
+- [Windows 10 深度美化有什么技巧?](https://www.zhihu.com/question/39002007)
+- [致美化 - 最专业的桌面美化交流平台](https://zhutix.com)
 
 #### 其他设置
 
-- 修改 **UAC** 提示级别。
+##### UAC 提示级别设置
 
-  ![搜索 - UAC](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/uac.png)
+![搜索 - UAC](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/uac.png)
 
-  ![UAC 设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/uac2.png)
+![UAC 设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/uac2.png)
 
-- 设置默认程序
+##### 默认程序设置
 
-  - 图片 - **2345 看图王** `去广告版` ( **不要去官网下载，不要更新** )
+- 图片 - **2345 看图王** `去广告版` ( **不要去官网下载，不要更新** )
 
-    > 广告确实很烦人但找不到比它更好用又好看的看图软件了。
+  > 广告确实很烦人但找不到比它更好用又好看的看图软件了。
 
-  - 压缩文件 - [Bandizip](http://www.bandisoft.com) `最后无广告版本 ( 6.25 )`
+- 压缩文件 - [Bandizip](http://www.bandisoft.com) `最后无广告版本 ( 6.25 )`
 
-    > **好压** 虽然好用但广告禁不掉就弃用了，**Bandizip** 的话界面过于简陋，看图标一时也反应不过来是压缩包，凑合用吧。
+  > **好压** 虽然好用但广告禁不掉就弃用了，**Bandizip** 的话界面过于简陋，看图标一时也反应不过来是压缩包，凑合用吧。
 
-  - 音视频 - [PotPlayer](https://daumpotplayer.com/download)
+- 音视频 - [PotPlayer](https://daumpotplayer.com/download)
 
-  - 文本 - [Sublime Text](https://www.sublimetext.com)
+- 文本 - [Sublime Text](https://www.sublimetext.com)
 
-    > 轻量级的文本编辑器，可以用来记一些草稿。
+  > 轻量级的文本编辑器，可以用来记一些草稿。
 
-    可以将下面的 **批处理脚本** （ 另存为 **ANSI 编码** ）放到 **安装目录** 下来注册到 **右键菜单** ：
-
-    ```shell
-    :: Sublime Text 注册到右键菜单
-    @echo off
-
-    net session >nul 2>&1 || ( echo 请使用右键管理员身份运行！&& pause >nul )
-
-    :: 显示名称
-    set DisplayName=Sublime Text
-
-    :: 删除文件右键菜单
-    call :unregister "HKEY_CLASSES_ROOT\*\shell"
-
-    :: 删除选中文件夹右键菜单
-    call :unregister "HKEY_CLASSES_ROOT\Directory\shell"
-
-    :: 删除当前文件夹右键菜单
-    call :unregister "HKEY_CLASSES_ROOT\Directory\Background\shell"
-
-    :: 选项 /u 表示清除菜单
-    if "%~1" == "/u" goto :eof
-
-    :: 注册文件右键菜单
-    call :register "HKEY_CLASSES_ROOT\*\shell"
-
-    :: 注册选中文件夹右键菜单
-    call :register "HKEY_CLASSES_ROOT\Directory\shell"
-
-    :: 注册当前文件夹右键菜单
-    call :register "HKEY_CLASSES_ROOT\Directory\Background\shell" "%%%%V"
-
-    goto :eof
-
-    :: 添加注册表项
-    :register
-
-    set KeyName=%~1\%DisplayName%
-
-    :: 执行文件路径
-    set Exec=%~dp0sublime_text.exe
-
-    :: 设置菜单名称
-    reg add "%KeyName%" /ve /d "使用 %DisplayName% 打开" >nul 2>&1
-
-    :: 设置菜单图标
-    reg add "%KeyName%" /v Icon /d "\"%Exec%\"" >nul 2>&1
-
-    if "%~2" == "" ( set "p=%%1" ) else ( set "p=%~2" )
-
-    :: 设置菜单执行的命令
-    reg add "%KeyName%\Command" /ve /d "\"%Exec%\" \"%p%\"" >nul 2>&1
-
-    goto :eof
-
-    :: 删除已有的注册表项
-    :unregister
-
-    set KeyName=%~1\%DisplayName%
-
-    reg delete "%KeyName%" /f >nul 2>&1
-
-    goto :eof
-    ```
-
-    ![Sublime Text - 注册右键菜单](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/sublime.png)
-
-    > 批处理创建一个快捷方式并加上选项 `/u` 即可快捷删除右键菜单。
-
-- 常用软件修复
-
-  **90%** 的软件在系统重装后不需要重新安装，到安装目录下找到执行文件打开即可，最好还是找一个地方统一存放快捷方式。
-
-  有的还需要做额外的修复：
-
-  - 进入软件的设置，重新关联文件格式并修复右键菜单。
-  - 添加必要的环境变量。
-  - 安装 [微软常用运行库合集](https://www.haah.net/archives/2412.html) 可以解决大部分的 **dll 缺失错误** 。
-
-  **QQ** 的话比较恶心，以前只要安装 **微软常用运行库合集** 就可以修复了，之后又需要备份 **QQ 安全组件 （ QQProtect ）** ，再到现在不得不重装。不过保存好 **个人文件夹** 即使重装了数据应该也不会丢失。
-
-  微软自家的 [Visual Studio](https://visualstudio.microsoft.com) 和 [Office](https://www.microsoft.com/zh-cn/microsoft-365/microsoft-office) 尽管提供了自定义安装路径的选项，但还是会和系统文件做 **PY 交易** ，做不到绿色纯净，还不如无脑安装到系统盘，重装系统后再重装它们。
-
-  > 推荐使用 [Office Tool Plus](https://otp.landian.vip/zh-cn) 下载安装纯净的 **Office** ，同时也支持对 **Office** 进行管理。
-
-- 设置环境变量
-
-  ![搜索 - 环境变量](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/environment.png)
-
-  最好将自己设置的环境变量都放在 **用户变量** 下，使 **系统变量** 保持干净，需要备份的时候直接导出 **用户变量** 即可。（ [参考](https://my.oschina.net/dylan2hdf/blog/1543368) ）
+  可以将下面的 **批处理脚本** （ 另存为 **ANSI 编码** ）放到 **安装目录** 下来注册到 **右键菜单** ：
 
   ```shell
-  reg export HKEY_CURRENT_USER\Environment D:\user_environment.reg
+  :: Sublime Text 注册到右键菜单
+  @echo off
+
+  net session >nul 2>&1 || ( echo 请使用右键管理员身份运行！&& pause >nul )
+
+  :: 显示名称
+  set DisplayName=Sublime Text
+
+  :: 删除文件右键菜单
+  call :unregister "HKEY_CLASSES_ROOT\*\shell"
+
+  :: 删除选中文件夹右键菜单
+  call :unregister "HKEY_CLASSES_ROOT\Directory\shell"
+
+  :: 删除当前文件夹右键菜单
+  call :unregister "HKEY_CLASSES_ROOT\Directory\Background\shell"
+
+  :: 选项 /u 表示清除菜单
+  if "%~1" == "/u" goto :eof
+
+  :: 注册文件右键菜单
+  call :register "HKEY_CLASSES_ROOT\*\shell"
+
+  :: 注册选中文件夹右键菜单
+  call :register "HKEY_CLASSES_ROOT\Directory\shell"
+
+  :: 注册当前文件夹右键菜单
+  call :register "HKEY_CLASSES_ROOT\Directory\Background\shell" "%%%%V"
+
+  goto :eof
+
+  :: 添加注册表项
+  :register
+
+  set KeyName=%~1\%DisplayName%
+
+  :: 执行文件路径
+  set Exec=%~dp0sublime_text.exe
+
+  :: 设置菜单名称
+  reg add "%KeyName%" /ve /d "使用 %DisplayName% 打开" >nul 2>&1
+
+  :: 设置菜单图标
+  reg add "%KeyName%" /v Icon /d "\"%Exec%\"" >nul 2>&1
+
+  if "%~2" == "" ( set "p=%%1" ) else ( set "p=%~2" )
+
+  :: 设置菜单执行的命令
+  reg add "%KeyName%\Command" /ve /d "\"%Exec%\" \"%p%\"" >nul 2>&1
+
+  goto :eof
+
+  :: 删除已有的注册表项
+  :unregister
+
+  set KeyName=%~1\%DisplayName%
+
+  reg delete "%KeyName%" /f >nul 2>&1
+
+  goto :eof
   ```
 
-  **非 UI 界面** 下修改 **环境变量** 后立即生效方法：
+  ![Sublime Text - 注册右键菜单](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/sublime.png)
 
-  **任务管理器** 里找到 **资源管理器** ，右键 **重新启动** 。也可以执行下面的脚本：
+  > 批处理创建一个快捷方式并加上选项 `/u` 即可快捷删除右键菜单。
 
-  ```shell
-  tskill explorer
-  ```
+##### 常用软件修复
 
-- 设置开机启动
+**90%** 的软件在系统重装后不需要重新安装，到安装目录下找到执行文件打开即可，最好还是找一个地方统一存放快捷方式。
 
-  - 将快捷方式复制到开始菜单的启动项中
+有的还需要做额外的修复：
 
-    > `win + R` > `shell:startup`
+- 进入软件的设置，重新关联文件格式并修复右键菜单。
+- 添加必要的环境变量。
+- 安装 [微软常用运行库合集](https://www.haah.net/archives/2412.html) 可以解决大部分的 **DLL 缺失错误** 。
 
-    ![「开始」菜单 - 程序 - 启动](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/startmenu_startup.png)
+**QQ** 的话比较恶心，以前只要安装 **微软常用运行库合集** 就可以修复了，之后又需要备份 **QQ 安全组件（ QQProtect ）** ，再到现在不得不重装。不过保存好 **个人文件夹** 即使重装了数据应该也不会丢失。
 
-    > **注意**
-    >
-    > 需要 **管理员权限** 运行的程序放这里是无法开机启动的。
+微软自家的 [Visual Studio](https://visualstudio.microsoft.com) 和 [Office](https://www.microsoft.com/zh-cn/microsoft-365/microsoft-office) 尽管提供了自定义安装路径的选项，但还是会和系统文件做 **PY 交易** ，做不到绿色纯净，还不如无脑安装到系统盘，重装系统后再重装它们。
 
-  - [**计划任务** 中添加任务](https://anyesu.github.io/blog/articles/8#WSL%20%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8)
+> 推荐使用 [Office Tool Plus](https://otp.landian.vip/zh-cn) 下载安装纯净的 **Office** ，同时也支持对 **Office** 进行管理。
 
-    支持更高级的开机启动配置。
+##### 环境变量设置
 
-  - [注册为 **Windows 服务**](https://zhuanlan.zhihu.com/p/93808282)
+![搜索 - 环境变量](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/environment.png)
 
-  - [通过 **组策略** 设置](https://blog.csdn.net/qq_38684504/article/details/88255081)
+最好将自己设置的环境变量都放在 **用户变量** 下，使 **系统变量** 保持干净，需要备份的时候直接导出 **用户变量** 即可。（ [参考](https://my.oschina.net/dylan2hdf/blog/1543368) ）
 
-- 输入法设置
+```shell
+reg export HKEY_CURRENT_USER\Environment D:\user_environment.reg
+```
 
-  我以前用着最趁手的是 **QQ 拼音** ，但随着这些输入法越做越 **流氓** 就弃用了，改用系统自带的。自带的 **微软输入法** 现在也挺好用的，功能也挺强大的，唯一要做的就是 **养词库** 。
+**非 UI 界面** 下修改 **环境变量** 后立即生效方法：
 
-  > 有必要的话可以把 **全/半角切换** 和 **中/英文标点切换** 这类快捷键禁用了， **全/半角状态** 在不经意间换来换去会很混乱（ 比如显示 **全角的英文** ， **半角的中文符号** ）。
+**任务管理器** 里找到 **资源管理器** ，右键 **重新启动** 。也可以执行下面的脚本：
 
-- 电源选项 - 快速启动
+```shell
+tskill explorer
+```
 
-  > 以前的版本要先禁用掉重启后再启用才会真正生效，现在新版不知道还要不要这样设置。
+##### 开机启动设置
 
-- 电源选项 - 电源计划
+- 将快捷方式复制到开始菜单的启动项中
 
-  - [PowerSwitcher](https://github.com/petrroll/PowerSwitcher) - 快速切换电源计划的小工具
+  > `win + R` > `shell:startup`
 
-  新版系统应该只有一个 **平衡模式** ，其他的需要自己手动创建。
+  ![「开始」菜单 - 程序 - 启动](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/startmenu_startup.png)
 
-  ![创建电源计划](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/power_plan_new.png)
+  > **注意**
+  >
+  > 需要 **管理员权限** 运行的程序放这里是无法开机启动的。
 
-  **卓越性能模式** （ 没发现什么特别之处，图个新鲜 ）通过下面的 **powershell** 命令创建：
+- [**计划任务** 中添加任务](https://anyesu.github.io/blog/articles/8#WSL%20%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8)
 
-  ```powershell
-  powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
-  ```
+  支持更高级的开机启动配置。
 
-  **高性能模式** 会强制 **CPU** 运行在全核睿频的频率上，而 **平衡模式** 会自动调节频率以降低功耗，一般轻度办公开 **平衡模式** 就够了，省电发热量也会少一点。
+- [注册为 **Windows 服务**](https://zhuanlan.zhihu.com/p/93808282)
 
-  **最大最小处理器状态** ：最大值小于最小值时就固定为最小值，针对 **Intel CPU** ，有效最大值只要低于 **100%** 就不再 **睿频** ，最多维持在基准频率上。（ [参考](https://www.zhihu.com/question/349487250/answer/848139474) ）
+- [通过 **组策略** 设置](https://blog.csdn.net/qq_38684504/article/details/88255081)
 
-  - [CPU 为什么会有高频低负载的状态？](https://www.zhihu.com/question/305248464)
-  - [电脑开着高性能模式好还是平衡模式好？](https://www.zhihu.com/question/39485925)
+##### 输入法设置
 
-- 优化
+我以前用着最趁手的是 **QQ 拼音** ，但随着这些输入法越做越 **流氓** 就弃用了，改用系统自带的。自带的 **微软输入法** 现在也挺好用的，功能也挺强大的，唯一要做的就是 **养词库** 。
 
-  一般用 [电脑管家](https://guanjia.qq.com) 的电脑加速就够了，也可以配合 [软媒魔方](https://mofang.ruanmei.com) 一起。
+> 有必要的话可以把 **全/半角切换** 和 **中/英文标点切换** 这类快捷键禁用了， **全/半角状态** 在不经意间换来换去会很混乱（ 比如显示 **全角的英文** ， **半角的中文符号** ）。
 
-  ![电脑管家 - 优化](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/QQPCMgr.png)
+##### 电源选项 - 快速启动
 
-  ![软媒魔方 - 优化大师](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/PCMaster_boostmaster.png)
+> 以前的版本要先禁用掉重启后再启用才会真正生效，现在新版不知道还要不要这样设置。
 
-  杀毒软件这块两极分化比较严重，有的人选择 **裸奔** ，有的人选择 **360 全家桶** 、**X 大师** 等等一股脑都装上。我的选择是 **电脑管家** ，垃圾清理、软件卸载、弹窗拦截这些功能还是比较良心的。至于自带的 **Windows Defender** 其实也不错，但扫描频率有点高，而且容易误报，还是不适合我们的国情。
+##### 电源选项 - 电源计划
+
+- [PowerSwitcher](https://github.com/petrroll/PowerSwitcher) - 快速切换电源计划的小工具
+
+新版系统应该只有一个 **平衡模式** ，其他的需要自己手动创建。
+
+![创建电源计划](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/power_plan_new.png)
+
+**卓越性能模式** （ 没发现什么特别之处，图个新鲜 ）通过下面的 **powershell** 命令创建：
+
+```powershell
+powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+```
+
+**高性能模式** 会强制 **CPU** 运行在全核睿频的频率上，而 **平衡模式** 会自动调节频率以降低功耗，一般轻度办公开 **平衡模式** 就够了，省电发热量也会少一点。
+
+**最大最小处理器状态** ：最大值小于最小值时就固定为最小值，针对 **Intel CPU** ，有效最大值只要低于 **100%** 就不再 **睿频** ，最多维持在基准频率上。（ [参考](https://www.zhihu.com/question/349487250/answer/848139474) ）
+
+- [CPU 为什么会有高频低负载的状态？](https://www.zhihu.com/question/305248464)
+- [电脑开着高性能模式好还是平衡模式好？](https://www.zhihu.com/question/39485925)
+
+##### 其他优化
+
+一般用 [电脑管家](https://guanjia.qq.com) 的电脑加速就够了，也可以配合 [软媒魔方](https://mofang.ruanmei.com) 一起。
+
+![电脑管家 - 优化](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/QQPCMgr.png)
+
+![软媒魔方 - 优化大师](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/PCMaster_boostmaster.png)
+
+杀毒软件这块两极分化比较严重，有的人选择 **裸奔** ，有的人选择 **360 全家桶** 、**X 大师** 等等一股脑都装上。我的选择是 **电脑管家** ，垃圾清理、软件卸载、弹窗拦截这些功能还是比较良心的。至于自带的 **Windows Defender** 其实也不错，但扫描频率有点高，而且容易误报，还是不适合我们的国情。
 
 **这块主要就是些繁琐的配置，最好是按自己的使用习惯列一个清单一步一步操作。每次重装系统后都要重复配置这些，总是会丢三落四的，我曾经想过写一个小工具去 "一键设置" ，不过还是放弃了，花几天时间做一个工具结果只省下来几分钟的时间，这个投入产出太不划算了。而且需求总是在变化的，有时候挑剔，什么细节都要优化，有时候懒，装完系统什么都懒得改，所以通用性很难做，Dism++ 的优化功能可以凑合用着。**
 
@@ -565,11 +588,11 @@
 
 **FAQ**
 
-##### 怎么在新 Mac 上安装 Windows
+##### 在新 Mac 上安装 Windows
 
 我没试过，可以看下官方文档（ [Windows 7](https://support.apple.com/zh-cn/HT205016) / [Windows 10](https://support.apple.com/zh-cn/HT201468) ），关键是分区，分完区之后的安装应该简单的。
 
-##### 如何在 Windows 和 macOS 之间切换
+##### 在 Windows 和 macOS 之间切换
 
 重新启动，然后在启动过程中按住 `Option` （ 或 `Alt` ）⌥ 键，即可 [在 Windows 和 macOS 之间切换](https://support.apple.com/zh-cn/HT208123) 。
 
@@ -581,7 +604,7 @@
 
 重新进 **macOS** 静音即可。
 
-##### 如何保持 Windows 默认启动
+##### 保持 Windows 默认启动
 
 进入 **macOS** 后重启默认还是会启动 **macOS** ，点击左上角 **苹果菜单** > **系统偏好设置** > **启动磁盘** ，选中想要使用的磁盘的图标，然后 **重新启动** 。（ [参考](https://support.apple.com/zh-cn/guide/mac-help/mchlp1034/mac) ）
 
@@ -633,7 +656,7 @@ BootCamp（文件夹）
 
 默认情况下设置里是找不到触摸板选项的（ 触摸板虽然能用但很生硬 ），下载第三方的开源驱动（ [mac-precision-touchpad](https://github.com/imbushuo/mac-precision-touchpad) ）即可完美支持。
 
-##### 关于散热
+##### 散热
 
 测试了下，默认情况风扇按最低转速运行， **CPU** 接近 **100 ℃** 时才会开始加速，温度降到 **80 ℃** 左右就恢复到最低转速了。这个策略很有问题，闲的时候积热处理不及时，忙的时候就会迅速升温，等开始降频了才反应过来全速散热，这样就导致频率不稳定而且风扇老是狂响的问题。
 
@@ -670,58 +693,60 @@ BootCamp（文件夹）
 
 重装方法和新装系统类似就不多说了，重要的是对原有系统的数据进行备份：
 
-- 用户文件夹
+##### 用户文件夹
 
-  ```
-  %USERPROFILE%
-  ```
+```ini
+%USERPROFILE%
+```
 
-  常用的 **桌面** 、**下载** 、**我的文档** 等都在这个目录下，系统盘你需要备份的数据 **90%** （ 这个数值是我编的 ）都在这里了，你不清楚哪些有用哪些没用的话就整体备份，以后再慢慢整理。
+常用的 **桌面** 、**下载** 、**我的文档** 等都在这个目录下，系统盘你需要备份的数据 **90%** （ 这个数值是我编的 ）都在这里了，你不清楚哪些有用哪些没用的话就整体备份，以后再慢慢整理。
 
-- 应用程序数据
+##### 应用程序数据
 
-  ```
-  %SystemDrive%\ProgramData
-  ```
+```ini
+%SystemDrive%\ProgramData
+```
 
-- 注册表
+##### 注册表
 
-  很多的系统配置项和软件配置项都在这里了，全部导出大概 **500 MB** ，重装后想直接拿备份全量还原是不太现实的，毕竟还是有很多差异的，只是做参考比较还是可以的。
+很多的系统配置项和软件配置项都在这里了，全部导出大概 **500 MB** ，重装后想直接拿备份全量还原是不太现实的，毕竟还是有很多差异的，只是做参考比较还是可以的。
 
-- 已安装的软件
+##### 已安装的软件
 
-  ```
-  %SystemDrive%\Program Files (x86)
-  %SystemDrive%\Program Files
-  ```
+```ini
+%SystemDrive%\Program Files (x86)
+%SystemDrive%\Program Files
+```
 
-  在这两个目录下找找有没有你认识的软件，适当的做备份。当然，如果你平时习惯比较好，不往系统盘装软件，直接跳过这步。
+在这两个目录下找找有没有你认识的软件，适当地做备份。当然，如果你平时习惯比较好，不往系统盘装软件，直接跳过这步。
 
-- 开机启动项
+##### 开机启动项
 
-  如果你设置了自定义的开机启动项，记得去导出下配置。（ 同上文设置开机启动的方法 ）
+如果你设置了自定义的开机启动项，记得去导出下配置。（ 同上文设置开机启动的方法 ）
 
-- **VPN** 配置文件
+##### VPN 配置文件
 
-  ```
-  %AppData%\Microsoft\Network\Connections\Pbk\rasphone.pbk
-  ```
+```ini
+%AppData%\Microsoft\Network\Connections\Pbk\rasphone.pbk
+```
 
-- hosts 文件
+##### hosts 文件
 
-  ```
-  %windir%\System32\drivers\etc\hosts
-  ```
+```ini
+%windir%\System32\drivers\etc\hosts
+```
 
 > **注意**
 >
-> 上面的路径中用到了环境变量而不是写死的 C 盘路径，适用于安装在其他盘符下的系统。
+> 上面的路径中用到了环境变量而不是写死的 **C** 盘路径，适用于安装在其他盘符下的系统。
 
 #### 备份还原系统
 
-用 **Dism++** 备份系统非常的方便（ [文档](https://www.chuyu.me/zh-Hans/Document.html?file=Quickstart.md#%E5%A4%87%E4%BB%BD%E7%B3%BB%E7%BB%9F) ），可以增量备份，还可以还原到任意分区（ 还原后目标分区可能需要重新 [4K 对齐](https://www.disktool.cn/jiaocheng/align-check.html) ）。
+用 **Dism++** 备份系统非常方便（ [文档](https://www.chuyu.me/zh-Hans/Document.html?file=Quickstart.md#%E5%A4%87%E4%BB%BD%E7%B3%BB%E7%BB%9F) ），可以增量备份（ 一个备份文件保存多个版本 ），还可以还原到任意分区（ 还原后目标分区可能需要重新 [4K 对齐](https://www.disktool.cn/jiaocheng/align-check.html) ）。
 
-系统安装完成并且环境配置完毕的时候建议做一次备份以备不时之需。至于还原，说实话基本上是用不上的，一般真到了需要重装的时候都可以升级新版系统了，除非你刚装完的系统没过几天就挂了。
+系统安装完成并且各种琐碎的通用配置都弄好的时候建议做一次备份以备不时之需。系统挂了之后用还原比重装系统省事多了，经历过几次深有体会。
+
+值得一提的是，由于还原后还是原来的账户，文件权限这块毫无障碍，许多残留的配置可以直接使用，没清空的回收站也可以直接查看，不像重装后留下一堆不可访问的回收站目录。
 
 #### 迁移系统目录
 
@@ -730,7 +755,7 @@ BootCamp（文件夹）
 - [Windows 系统目录迁移: Users, Program Files, ProgramData](https://blog.csdn.net/hansel/article/details/50813797)
 - [更改 Windows 7 用户文件夹默认位置的方法](http://blog.sina.com.cn/s/blog_61abdd600100t7m3.html)
 
-迁移的思路：**原文件移动到新的目录，在原路径建立符号链接指向新路径** 。最妙的地方就是用到了 **符号链接** （ 可以理解成另一种快捷方式 ），这样的话路径的修改对于系统和应用程序来说完全是无感的，按照原先的路径该怎么访问就怎么访问，完全不需要去修改 **注册表** 和 **环境变量** 、甚至是一些隐藏在其他地方的配置文件。
+迁移的思路：**原文件移动到新的目录，在原路径建立符号链接指向新路径** 。最妙的地方就是用到了 **符号链接** （ 类似快捷方式的效果 ），这样的话路径的修改对于系统和应用程序来说完全是无感的，按照原先的路径该怎么访问就怎么访问，完全不需要去修改 **注册表** 和 **环境变量** 、甚至是一些隐藏在其他地方的配置文件。
 
 > 注册表中的配置有些地方用的是环境变量 `%SystemDrive%` 有些地方是写死的 `C:\` ，太多地方需要修改了，也很难改全。
 
@@ -1234,6 +1259,8 @@ BootCamp（文件夹）
 
   曾经在 **win10** 上强行安装 **win8** 版本的 **电源管理驱动** ，系统就直接挂了，虽然可以用 **Dism++** 修改驱动，但毕竟不懂驱动程序的运行机制以及安装文件还修改了什么系统内容，没准越改越错，还不如重装算了。
 
+  **驱动是很娇弱的，能正常使用就别瞎折腾了，一不小心就崩了。**
+
 - 无意删除了什么重要的系统文件
 
 - 错误修改环境变量或者注册表
@@ -1243,6 +1270,12 @@ BootCamp（文件夹）
   之前办公室一台 **Windows 7** 台式机突然开机蓝屏，根据错误发现是硬盘模式的问题，修改为 **AHCI** 后能正常开机。不过第二天开机又不行了，打开 **BIOS** 发现配置又自动改回 **IDE** 了，于是抠主板电池重启，发现默认配置就是 **IDE** ，估计是主板电池（ 用了大概 6、7 年 ）没电了，换了电池后就再也没出错了。
 
   关于免重装系统切换硬盘模式的方法见 [文末](#免重装系统-IDE--AHCI-模式互转) 。
+
+- 网络重置
+
+  > 设置 - 网络和 **Internet** - 状态 - 网络重置
+
+  捣鼓完网卡驱动想看看 **网络重置** 能不能恢复，然后就崩了。
 
 遇到上面这些情况（ 除了最后一种 ）基本只有重装系统的份了，虽然 **Windows** 提供了 **恢复环境** （ [Windows RE](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) ），但你都不知道哪里出错了又谈何去修复呢，而且用的还是没有文档的命令行工具。
 
@@ -1258,17 +1291,17 @@ BootCamp（文件夹）
 
 **分区助手** 提供了两种迁移方法：
 
-- [迁移系统到固态硬盘](https://www.disktool.cn/jiaocheng/migrate-system-drive.html)
+##### [迁移系统到固态硬盘](https://www.disktool.cn/jiaocheng/migrate-system-drive.html)
 
-  > 仅适用于从一个硬盘迁移到另一个硬盘。
+> 仅适用于从一个硬盘迁移到另一个硬盘。
 
-  针对 **UEFI 启动模式** 不需要提前创建 **ESP 分区**，迁移过程中会自动复制，手动创建会导致出现多个 **ESP 分区** 。
+针对 **UEFI 启动模式** 不需要提前创建 **ESP 分区**，迁移过程中会自动复制，手动创建会导致出现多个 **ESP 分区** 。
 
-- [克隆分区](https://www.disktool.cn/content-center/clone-partition-gparted-1016.html)
+##### [克隆分区](https://www.disktool.cn/content-center/clone-partition-gparted-1016.html)
 
-  > 适用于从一个分区迁移到另一个分区。
+> 适用于从一个分区迁移到另一个分区。
 
-  仅复制选中的分区，缺失隐藏分区的话需要手动修复。
+仅复制选中的分区，缺失隐藏分区的话需要手动修复。
 
 **如果迁移后的系统无法引导：**
 
@@ -1336,7 +1369,7 @@ BootCamp（文件夹）
 
 > **BIOS** 代表基本输入输出系统。 **其实，它是一组固化到计算机内主板上一个 ROM 芯片上的程序，它保存着计算机最重要的基本输入输出的程序、开机后自检程序和系统自启动程序，它可从 CMOS 中读写系统设置的具体信息。** 其主要功能是为计算机提供最底层的、最直接的硬件设置和控制。此外，BIOS 还向作业系统提供一些系统参数。系统硬件的变化是由 **BIOS** 隐藏，程序使用 **BIOS** 功能而不是直接控制硬件。现代作业系统会忽略 **BIOS** 提供的抽象层并直接控制硬件组件。
 
-启动模式（ **BOOT MODE** ）分为 **BIOS**（ 也称 **Legacy** ） 和 **UEFI** 两种互不兼容的方式（ [参考 1](https://tieba.baidu.com/p/5805120650) 、 [参考 2](https://www.zhihu.com/question/26048255) ）。早期的电脑只支持 **BIOS** ，目前新出的电脑应该只支持 **UEFI** ，中间过渡时期两种模式都支持，可以自行切换 （ [修改方法](https://jingyan.baidu.com/article/f54ae2fc57e0371e92b84988.html) ）。显而易见 **UEFI** 是未来趋势。
+启动模式（ **BOOT MODE** ）分为 **BIOS**（ 也称 **Legacy** ）和 **UEFI** 两种互不兼容的方式（ [参考 1](https://tieba.baidu.com/p/5805120650) 、 [参考 2](https://www.zhihu.com/question/26048255) ）。早期的电脑只支持 **BIOS** ，目前新出的电脑应该只支持 **UEFI** ，中间过渡时期两种模式都支持，可以自行切换（ [修改方法](https://jingyan.baidu.com/article/f54ae2fc57e0371e92b84988.html) ）。显而易见 **UEFI** 是未来趋势。
 
 各种术语的定义可以看下这篇文章 → [传送门](https://www.disktool.cn/bbs/?thread-2068.htm)
 
@@ -1360,8 +1393,8 @@ BootCamp（文件夹）
 
 #### 分区工具
 
-1. 一般 **PE** 中自带 [DiskGenius](https://www.diskgenius.cn) ，直接用就好了。
-2. 在安装好的 **Windows** 上可以用 [傲梅分区助手](https://www.disktool.cn) 。
+- 一般 **PE** 中自带 [DiskGenius](https://www.diskgenius.cn) ，直接用就好了。
+- 在安装好的 **Windows** 上可以用 [傲梅分区助手](https://www.disktool.cn) 。
 
 非专业用户，暂时还体会不到两者的区别，哪个用着更顺就用哪个。
 
@@ -1387,7 +1420,7 @@ BootCamp（文件夹）
 
 > **IDE** 转为 **AHCI** 的文章网上很多，但转回去的方法我在网上还真没搜到，有人提问但是要么答非所问要么直接开怼为什么要转回 **IDE** ，下面的方法还是我自己瞎试试出来的。至于为什么要转回 **IDE** ？每个人有不一样的需求罢了，可能是 **AHCI** 不兼容，也可能像我一样为了转回去对比硬盘读写速度，没什么好喷的。
 
-**IDE** 转为 **AHCI**
+##### IDE 转为 AHCI
 
 1. 修改注册表。
 
@@ -1405,7 +1438,7 @@ BootCamp（文件夹）
 
 3. 重启进入系统。
 
-**AHCI** 转为 **IDE**
+##### AHCI 转为 IDE
 
 1. 修改注册表。
 
@@ -1419,7 +1452,7 @@ BootCamp（文件夹）
    "0"=dword:00000000
    ```
 
-2. 重启进 **BIOS** 修改为 **IDE** 模式 （ **Compatible** ）。
+2. 重启进 **BIOS** 修改为 **IDE** 模式（ **Compatible** ）。
 
 3. 重启进入系统。
 
