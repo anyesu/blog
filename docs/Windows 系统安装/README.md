@@ -6,7 +6,7 @@
 
 本文仅记录我平常装系统的步骤以及遇到过的一些问题，不保证面面俱到，不包教会，有问题欢迎在评论区留言探讨。
 
-![cover](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/cover.png)
+![cover](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/cover.png)
 
 > **注意**
 >
@@ -26,7 +26,7 @@
 
 这是官方方案，可以保证绝对的安全可靠，操作过程也比较简单，适合新手。缺点的话就是不够灵活，只能安装最新版本的系统而不能指定版本，而且每次制作要重新下载相对比较耗时。
 
-![media creation tool 主要步骤](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/media_creation_tool_steps.png)
+![media creation tool 主要步骤](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/media_creation_tool_steps.png)
 
 #### 制作 PE 系统 ，在 PE 中使用 Windows 官方镜像完成安装。
 
@@ -86,7 +86,7 @@
 
   下载完成后推荐使用 [iHasher](https://share.weiyun.com/5gtDK6E) 进行 [SHA1](https://baike.baidu.com/item/SHA-1) 校验，即使是别处下载的镜像也可以在线对比获取版本信息。
 
-  ![iHasher 校验](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iHasher_verify.png)
+  ![iHasher 校验](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iHasher_verify.png)
 
 - **media creation tool**
 
@@ -110,9 +110,9 @@
 
 打开 **微 PE 安装包** 选择 **安装 PE 到 U 盘** ，使用默认的 **方案一：全能三分区方式** 即可，这种方案兼容大部分新旧电脑。（ [微 PE 官方教程](http://www.wepe.com.cn/ubook) ）
 
-![微 PE - 安装主界面](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/wepe_1.png)
+![微 PE - 安装主界面](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/wepe_1.png)
 
-![微 PE - 安装配置项](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/wepe_2.png)
+![微 PE - 安装配置项](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/wepe_2.png)
 
 安装完成后 **U 盘** 会被重新分区并格式化（ 注意提前备份 **U 盘** 中原来的数据 ），资源管理器下可见一个 **数据分区** ，可当作普通的 **U 盘** 分区来存储数据。推荐使用 **32 GB** 及以上容量的、读取速度超过 **100 MB/s** 的 **U 盘** ，可以将几个不同版本（ **XP** 、 **win7** 、 **win8** 、 **win10** 、 **win11** 、 **32 位** 、 **64 位** ）的镜像和其他常用的软件、驱动复制到 **数据分区** 中，这样就成了一个 **万能装机工具盘** ，走到哪装到哪 。
 
@@ -134,7 +134,7 @@
 
 根目录中的 `setup.exe` 就是安装文件入口，不过我一般更习惯打开 `sources\setup.exe` 以跳过一些不必要的联机检查。
 
-![默认打开方式 - 联机检查](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_online_check.png)
+![默认打开方式 - 联机检查](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_online_check.png)
 
 ### 正式安装系统
 
@@ -144,15 +144,15 @@
 
 - 主界面。
 
-  ![安装 - 0](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_0.png)
+  ![安装 - 0](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_0.png)
 
-  ![安装 - 1](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_1.png)
+  ![安装 - 1](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_1.png)
 
 - 通常选择 **我没有产品密钥** ，之后系统安装完成了再进行 **激活** 。
 
   > 如果你使用的是链接到 Microsoft 帐户的数字许可证，则可以通过选择“我没有产品密钥”来运行安装程序并跳过产品密钥选项。 当你使用 Microsoft 帐户登录并连接到 Internet 时，则会被激活。
 
-  ![安装 - 2](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_2.png)
+  ![安装 - 2](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_2.png)
 
 - 选择要安装的版本。
 
@@ -160,23 +160,23 @@
 
   **当然，还是要取决于你的密钥或数字证书能激活哪个版本的系统，不能激活也是白瞎。**
 
-  ![安装 - 3](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_3.png)
+  ![安装 - 3](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_3.png)
 
 - 勾选 **我接受许可条款** （ 快捷键 - **空格键** ）后点击 **下一步** 。
 
-  ![安装 - 4](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_4.png)
+  ![安装 - 4](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_4.png)
 
 - 选择 **自定义：仅安装 Windows（高级）** 。
 
   至于升级选项我自己是从来没用过的，升级后数据和设置能保留到什么程度不得而知，手动备份重要的用户数据还是很有必要的。
 
-  ![安装 - 5](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_5.png)
+  ![安装 - 5](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_5.png)
 
 - 选择用于安装系统的分区。
 
   点击 **下一步** 安装程序会自动进行分区，但新硬盘最好还是使用 [分区工具](#分区工具) 进行 **快速分区** 。
 
-  ![安装 - 6](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_6.png)
+  ![安装 - 6](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_6.png)
 
   > 如果是在选中分区上重装系统的话，建议先格式化对应分区，不然系统安装完成后还是要去手动清理 **Windows.old** 。
 
@@ -190,11 +190,11 @@
 
     一般推荐分区大小至少 **60 GB** ，有些软件只能安装到系统盘（ 比如 **Visual Studio** ），初始空间分配太小了后面再调整就麻烦了，微信聊天记录比较多（ 我曾经见过微信数据超过 **60 GB** 的 ... ）的朋友可以再适当加大一些。
 
-    ![错误 - 磁盘分区空间不足](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_error_1.png)
+    ![错误 - 磁盘分区空间不足](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_1.png)
 
   - 磁盘分区格式不对（ [参考](https://answers.microsoft.com/zh-hans/windows/forum/all/win10%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E9%97%AE/d724cf43-b1c8-4379-ac33-788af0b74003) ）
 
-    ![错误 - 磁盘分区格式不对](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_error_2.png)
+    ![错误 - 磁盘分区格式不对](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_2.png)
 
     **磁盘分区格式** 和 **BIOS 启动模式** 是有对应关系的，通常是 [**MBR + Legacy**](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions) 和 [**GPT + UEFI**](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions) 两种组合，显而易见要解决这个错误无非就是修改 **磁盘分区格式** 或者 **BIOS 启动模式** ，更多详情见 [文末](#BIOS-启动模式) 。
 
@@ -202,7 +202,7 @@
 
   - 缺少 **ESP/MSR 分区**
 
-    ![错误 - 缺少 ESP/MSR 分区](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_error_3.png)
+    ![错误 - 缺少 ESP/MSR 分区](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_3.png)
 
     这种情况是我在把 **MBR** 硬盘简单转为 **GPT** 后出现的，原因是缺少 **ESP/MSR 分区** 。
 
@@ -210,19 +210,19 @@
 
   - 无法安装到移动硬盘
 
-    ![错误 - 无法安装到移动硬盘](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_error_4.png)
+    ![错误 - 无法安装到移动硬盘](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_4.png)
 
   - 以前装机的时候还遇到过其他问题，一时想不起来了，以后遇到了再补充。
 
 - 拷贝文件和安装
 
-  ![安装 - 7](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/iso_7.png)
+  ![安装 - 7](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_7.png)
 
   > `正在复制 Windows 文件` 在 **Windows** 下还要花点时间，在 **PE** 下秒过（ 应该是省去了拷贝到临时目录的步骤 ）。
 
   安装完成就会自动重启几遍进入初始化设置界面 （ **海内存知己，天涯若比邻** ），这里用时一般 **几分钟** 到 **几小时** 不等，取决于你的硬盘写入速度。
 
-  ![海内存知己，天涯若比邻](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/windows_setup.png)
+  ![海内存知己，天涯若比邻](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/windows_setup.png)
 
   后面就没什么好讲的，一步一步设置就好了，**请坐和放宽** 。建议这里插网线并登录 **微软账户** ，之后直接自动下载驱动一步到位。
 
@@ -238,16 +238,16 @@
 
 前面安装系统的时候我们没有输入密钥，因此安装完的系统是未激活的，未激活状态下很多功能都是受限制的。至于激活的方式网上一大堆，有免费的也有收费的，我就不多介绍了。
 
-![激活 Windows](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/activation_1.png)
+![激活 Windows](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/activation_1.png)
 
 根据官方文档的描述，理论上应该是如果 [微软账户](https://account.microsoft.com) 绑定了 **数字许可证** 的话，即使更换了电脑也能直接激活 **Windows 10** ，但实际上我的账户（ 在 **Windows 10 早期开发者预览版** 的时候注册的 ）换电脑后并不能激活。
 
 - [激活 Windows](https://support.microsoft.com/zh-cn/windows/%E6%BF%80%E6%B4%BB-windows-c39005d4-95ee-b91e-b399-2820fda32227)
 - [在更换硬件后重新激活 Windows 10](https://support.microsoft.com/zh-cn/windows/%E5%9C%A8%E6%9B%B4%E6%8D%A2%E7%A1%AC%E4%BB%B6%E5%90%8E%E9%87%8D%E6%96%B0%E6%BF%80%E6%B4%BB-windows-10-2c0e962a-f04c-145b-6ead-fb3fc72b6665)
 
-![Windows 未激活](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/activation_2.png)
+![Windows 未激活](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/activation_2.png)
 
-![无法激活 Windows](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/activation_3.png)
+![无法激活 Windows](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/activation_3.png)
 
 #### 驱动安装
 
@@ -261,7 +261,7 @@
 
 - 打开 **文件资源管理器** 时打开 **此电脑** 而不是 **快速访问** 。
 
-  ![资源管理器设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/config_explorer.png)
+  ![资源管理器设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/config_explorer.png)
 
 - 启用 **预览窗格** ，直接在窗口右侧预览文件而无需打开。
 
@@ -269,15 +269,15 @@
 
 - 在 **快速访问** 中不显示 **最近访问的内容** 以保护隐私。
 
-  ![软媒魔方 - 清理隐私](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/PCMaster_cleanmaster.png)
+  ![软媒魔方 - 清理隐私](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/PCMaster_cleanmaster.png)
 
 - **资源管理器** 添加常用 **右键菜单** 。
 
-  ![软媒魔方 - 设置大师](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/PCMaster_winmaster.png)
+  ![软媒魔方 - 设置大师](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/PCMaster_winmaster.png)
 
 - 删除文件时显示 **确认对话框** 。
 
-  ![回收站属性设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/RecycleBin.png)
+  ![回收站属性设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/RecycleBin.png)
 
 - [Quick Look](https://github.com/QL-Win/QuickLook) - 像 **macOS** 一样通过空格键预览文件内容。[插件](https://github.com/QL-Win/QuickLook/wiki/Available-Plugins) ：
 
@@ -290,11 +290,11 @@
 
   - [PowerToys](https://github.com/microsoft/PowerToys) - 支持 **Markdown** 、 **SVG** 和 **PDF** 。
 
-    ![PowerToys - 设置文件预览](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/PowerToys.png)
+    ![PowerToys - 设置文件预览](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/PowerToys.png)
 
 #### 美化
 
-![桌面整体效果](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/desktop_final.jpg)
+![桌面整体效果](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/desktop_final.jpg)
 
 - 壁纸
 
@@ -312,13 +312,13 @@
 
 - 桌面图标设置
 
-  ![设置桌面图标](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/desktop_icons.png)
+  ![设置桌面图标](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/desktop_icons.png)
 
 - [ModernFlyouts](https://github.com/ModernFlyouts-Community/ModernFlyouts)
 
   用于将旧的 **Windows 8 Metro** 风格弹窗覆盖为 **Fluent Design** 风格弹窗。
 
-  ![ModernFlyouts](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/ModernFlyouts.png)
+  ![ModernFlyouts](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/ModernFlyouts.png)
 
 - [任务栏图标居中](https://jingyan.baidu.com/article/d8072ac4689a1dec95cefdfd.html)
 
@@ -326,13 +326,13 @@
 
 - 隐藏默认的任务栏图标
 
-  ![任务栏 - 图标](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/taskbar_icons.png)
+  ![任务栏 - 图标](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/taskbar_icons.png)
 
 - 添加 **工具栏**
 
   我桌面上不放 **快捷方式** ，所有 **常用软件** 的 **快捷方式** 统一放到一个目录下，再添加到 **任务栏** 的 **工具栏** 中，效果类似精简版的旧版开始菜单。
 
-  ![任务栏 - 工具栏](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/taskbar_toolbar.png)
+  ![任务栏 - 工具栏](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/taskbar_toolbar.png)
 
 - 透明任务栏
 
@@ -342,7 +342,7 @@
 
 - [XMeters](https://entropy6.com/xmeters) - 任务栏监控。
 
-  ![xmeters](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/xmeters.png)
+  ![xmeters](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/xmeters.png)
 
 - 其他美化资源
 
@@ -353,9 +353,9 @@
 
 - 修改 **UAC** 提示级别。
 
-  ![搜索 - UAC](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/uac.png)
+  ![搜索 - UAC](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/uac.png)
 
-  ![UAC 设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/uac2.png)
+  ![UAC 设置](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/uac2.png)
 
 - 设置默认程序
 
@@ -438,7 +438,7 @@
     goto :eof
     ```
 
-    ![Sublime Text - 注册右键菜单](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/sublime.png)
+    ![Sublime Text - 注册右键菜单](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/sublime.png)
 
     > 批处理创建一个快捷方式并加上选项 `/u` 即可快捷删除右键菜单。
 
@@ -460,7 +460,7 @@
 
 - 设置环境变量
 
-  ![搜索 - 环境变量](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/environment.png)
+  ![搜索 - 环境变量](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/environment.png)
 
   最好将自己设置的环境变量都放在 **用户变量** 下，使 **系统变量** 保持干净，需要备份的时候直接导出 **用户变量** 即可。（ [参考](https://my.oschina.net/dylan2hdf/blog/1543368) ）
 
@@ -482,7 +482,7 @@
 
     > `win + R` > `shell:startup`
 
-    ![「开始」菜单 - 程序 - 启动](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/startmenu_startup.png)
+    ![「开始」菜单 - 程序 - 启动](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/startmenu_startup.png)
 
     > **注意**
     >
@@ -506,19 +506,40 @@
 
   > 以前的版本要先禁用掉重启后再启用才会真正生效，现在新版不知道还要不要这样设置。
 
+- 电源选项 - 电源计划
+
+  - [PowerSwitcher](https://github.com/petrroll/PowerSwitcher) - 快速切换电源计划的小工具
+
+  新版系统应该只有一个 **平衡模式** ，其他的需要自己手动创建。
+
+  ![创建电源计划](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/power_plan_new.png)
+
+  **卓越性能模式** （ 没发现什么特别之处，图个新鲜 ）通过下面的 **powershell** 命令创建：
+
+  ```powershell
+  powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+  ```
+
+  **高性能模式** 会强制 **CPU** 运行在全核睿频的频率上，而 **平衡模式** 会自动调节频率以降低功耗，一般轻度办公开 **平衡模式** 就够了，省电发热量也会少一点。
+
+  **最大最小处理器状态** ：最大值小于最小值时就固定为最小值，针对 **Intel CPU** ，有效最大值只要低于 **100%** 就不再 **睿频** ，最多维持在基准频率上。（ [参考](https://www.zhihu.com/question/349487250/answer/848139474) ）
+
+  - [CPU 为什么会有高频低负载的状态？](https://www.zhihu.com/question/305248464)
+  - [电脑开着高性能模式好还是平衡模式好？](https://www.zhihu.com/question/39485925)
+
 - 优化
 
   一般用 [电脑管家](https://guanjia.qq.com) 的电脑加速就够了，也可以配合 [软媒魔方](https://mofang.ruanmei.com) 一起。
 
-  ![电脑管家 - 优化](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/QQPCMgr.png)
+  ![电脑管家 - 优化](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/QQPCMgr.png)
 
-  ![软媒魔方 - 优化大师](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/PCMaster_boostmaster.png)
+  ![软媒魔方 - 优化大师](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/PCMaster_boostmaster.png)
 
   杀毒软件这块两极分化比较严重，有的人选择 **裸奔** ，有的人选择 **360 全家桶** 、**X 大师** 等等一股脑都装上。我的选择是 **电脑管家** ，垃圾清理、软件卸载、弹窗拦截这些功能还是比较良心的。至于自带的 **Windows Defender** 其实也不错，但扫描频率有点高，而且容易误报，还是不适合我们的国情。
 
 **这块主要就是些繁琐的配置，最好是按自己的使用习惯列一个清单一步一步操作。每次重装系统后都要重复配置这些，总是会丢三落四的，我曾经想过写一个小工具去 "一键设置" ，不过还是放弃了，花几天时间做一个工具结果只省下来几分钟的时间，这个投入产出太不划算了。而且需求总是在变化的，有时候挑剔，什么细节都要优化，有时候懒，装完系统什么都懒得改，所以通用性很难做，Dism++ 的优化功能可以凑合用着。**
 
-![Dism++ - 优化](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/Dism++_optimization.png)
+![Dism++ - 优化](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/Dism++_optimization.png)
 
 ### 扩展阅读
 
@@ -530,11 +551,118 @@
 
 我的新电脑在 **Windows 10** 下已经通过了 [电脑健康状况检查应用](https://www.microsoft.com/zh-cn/windows/windows-11#pchealthcheck) 的检测，但在 **PE** 下还是不能直接安装（ ~~可能是需要对应的 **win11 PE**~~ ， [微 PE V2.2 已修复这个问题](https://www.wepe.com.cn/update/update2.2.html) ），可以用 **Dism++** 直接释放镜像来绕过检测。至于实际不满足条件的老设备还是不建议升级，毕竟官方不再保证兼容了。
 
-![无法安装 Windows 11](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/win11_can_not_install.png)
+![无法安装 Windows 11](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/win11_can_not_install.png)
 
 如果你的电脑上目前已经激活了 **Windows 10** ，那么可以直接激活 **Windows 11** 。
 
-![Windows 11 激活](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/activation_win11.png)
+![Windows 11 激活](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/activation_win11.png)
+
+#### 在 Mac 上重新安装 Windows
+
+最近拿到一台 [MacBookPro9,2](https://support.apple.com/kb/SP649) （ `OS X 10.8.4` ）需要重装系统（ **Windows 10** ），原先是通过 **Boot Camp** 安装的 **Windows 7** ，开机要一半天，进系统后还卡得不行，把各种流氓软件卸载完瞬间流畅了。
+
+由于我也是第一次在苹果机子上装系统，安装方式还是选择最稳妥的镜像升级方式，临时安装了 **2345 好压** 把系统镜像加载到 **虚拟光驱** 中，打开安装主程序（ 需要等待一段时间才会显示界面 ）默认也只有升级安装的选项（ 自定义方式可能会打不开 ），一直点下一步就完事了。因为用的是老旧的机械硬盘，安装速度非常慢，过程和普通电脑没什么区别。中间一次重启转圈圈的时候突然卡住了，风扇在狂转，等了一小时没反应只好强制关机了，重启后还能继续安装。
+
+**FAQ**
+
+##### 怎么在新 Mac 上安装 Windows
+
+我没试过，可以看下官方文档（ [Windows 7](https://support.apple.com/zh-cn/HT205016) / [Windows 10](https://support.apple.com/zh-cn/HT201468) ），关键是分区，分完区之后的安装应该简单的。
+
+##### 如何在 Windows 和 macOS 之间切换
+
+重新启动，然后在启动过程中按住 `Option` （ 或 `Alt` ）⌥ 键，即可 [在 Windows 和 macOS 之间切换](https://support.apple.com/zh-cn/HT208123) 。
+
+##### 未能找到 macOS 启动卷宗的位置
+
+重装完 **Windows** 默认不识别 **macOS** 所在的分区（ 重装前还是可见的 ），所以通过 **Boot Camp** 切换系统会报这个错误。应该是有方法识别的，但意义不大而且容易误操作分区，还是通过 `Option` 方法省事。
+
+##### 开机会有咚的一声。
+
+重新进 **macOS** 静音即可。
+
+##### 如何保持 Windows 默认启动
+
+进入 **macOS** 后重启默认还是会启动 **macOS** ，点击左上角 **苹果菜单** > **系统偏好设置** > **启动磁盘** ，选中想要使用的磁盘的图标，然后 **重新启动** 。（ [参考](https://support.apple.com/zh-cn/guide/mac-help/mchlp1034/mac) ）
+
+如果左下角的锁被锁定，点击锁按钮以 [解锁偏好设置面板](https://support.apple.com/zh-cn/guide/mac-help/aside/glosf17cc995) 。
+
+##### 驱动安装
+
+系统安装完最基本的通用驱动（ 包括无线网卡 ）都有了，需要通过 **Boot Camp** 安装其他特定驱动以适配我们的机器。
+
+> **Boot Camp** 有两个概念，一个是在 **Mac** 下用于安装 **Windows** 的安装器，中文名叫 **启动转换助理** ，另一个则是由 **Apple** 提供的最新 **Windows** 支持软件（ 驱动程序 ），包括 `F1 - F12` 功能快捷键、触摸板、显卡、声卡、网卡等驱动。
+
+本想从 [苹果官网下载](https://support.apple.com/zh_CN/downloads/Boot-Camp) ，但发现很零碎， [兼容性](https://xitongtiankong.com/archives/212) 也对不上，还是回 **macOS** 通过 **转换助理** 下载（ [参考](https://support.apple.com/zh-cn/HT204923) ）：只勾选 **从 Apple 下载最新的 Windows 支持软件** > 选择用于存储的 **U 盘** > 开始自动下载。
+
+下载完成会添加下面的文件（ **6136** 版大概 **2.6 G** ）到 **U 盘** 中，应该不会清空 **U 盘** 不过最好还是备份下重要数据。
+
+```ini
+$WinPEDriver$（文件夹）
+AutoUnattend.xml
+BootCamp（文件夹）
+```
+
+回到 **Windows** 打开 **BootCamp\Setup.exe** 就会自动安装了，安装完需要重启。
+
+**下载时遇到的一些问题：**
+
+隔几个小时偶尔会提示 **下载 Windows 7 支持软件** 。
+
+![bootcamp_win7](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/bootcamp_win7.png)
+
+点击 **继续** 会开始下载 **Windows 7 支持软件** ，而点击 **取消** 退出后重新开始就能下载 **Windows 10 支持软件** 了。
+
+还可能会遇到 **Windows 支持软件未能存储到所选文件夹** 错误。
+
+![bootcamp_save_error](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/bootcamp_save_error.png)
+
+这个问题是我 **第二次** 下载时遇到的，本以为是个偶然事件结果重试了几次发现都不行，看意思应该是数据写不进去，想起来 **U 盘** 之前按官方文档操作抹成 **FAT** 文件系统了，然而换了其他几种格式也还是不行。无意间打开 **磁盘工具** ，发现多出了好几个 **WindowsSupport.dmg** 文件，路径是：
+
+```shell
+/Library/Application Support/BootCamp/WindowsSupport.dmg
+```
+
+![bootcamp_cache](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/bootcamp_cache.png)
+
+这应该就是下载好的源文件，报错只是无法解压到 **U 盘** 而已，右键 **在 Finder 中显示** 后直接把压缩文件拷到 **U 盘** 里就好了（ 也可以双击打开把里面的文件复制出来 ）。利用这一点在开始下载后直接拔掉 **U 盘** 就能仅下载而不解压了。
+
+经过反复测试，发现和抹掉后缺省的分区名 **UNTITLED** 有关系，这个名称和另一个 **Windows** 的 **NTFS** 分区 **重名** 了（ 不区分大小写 ），换成其他不一样的名称就行了。估计是按名称查找所选择的分区，内置磁盘的优先级更高一点，而 **NTFS** 只读，**FAT** 和 **exFAT** 才可写入。（ 同理上图中的 **UNTITLED 1** 和 **BOOTCAMP** 也一样不行 ）
+
+##### 触摸板不丝滑
+
+默认情况下设置里是找不到触摸板选项的（ 触摸板虽然能用但很生硬 ），下载第三方的开源驱动（ [mac-precision-touchpad](https://github.com/imbushuo/mac-precision-touchpad) ）即可完美支持。
+
+##### 关于散热
+
+测试了下，默认情况风扇按最低转速运行， **CPU** 接近 **100 ℃** 时才会开始加速，温度降到 **80 ℃** 左右就恢复到最低转速了。这个策略很有问题，闲的时候积热处理不及时，忙的时候就会迅速升温，等开始降频了才反应过来全速散热，这样就导致频率不稳定而且风扇老是狂响的问题。
+
+使用 [Macs Fan Control](https://crystalidea.com/macs-fan-control) 可以修改风扇自动调节的温度区间，起到提前散热以避免触碰温度墙的作用，我的设置是 `CPU PECI - 70℃~90℃` 并开机启动。风扇转速超过 **4000 RPM** 就有点吵了，需要合理调整区间兼顾散热和噪声。（ [参考](https://www.zhihu.com/question/33606243/answer/701436667) ）
+
+风扇 **6200 RPM** 全速运行下 [AIDA64](https://www.aida64.com) 单烤 **CPU** 测试：
+
+| i7-3520M@2.9G(3.6G) | 平衡模式            | 高性能模式          |
+| ------------------- | ------------------- | ------------------- |
+| max 100% 空载       | 1.2G 54℃            | 2.1G~3.4G 55℃       |
+| max 100% 满载       | 2.7G~3.4G 100℃~104℃ | 2.7G~3.4G 100℃~104℃ |
+| max 99% 空载        | 1.2G 51℃            | 2.1G~2.9G 56℃       |
+| max 99% 满载        | 2.9G 95℃            | 2.9G 100℃           |
+
+单烤 **FPU** 的话不管哪种模式很快都会降频到 **2 G** 以下并有持续下降的趋势。
+
+日常轻度办公选择 **平衡模式** 就够用了，空闲时可以减少发热量，必要的话还可以设置 **最大处理器状态** 为 **99%** 以禁用 **睿频** 。有需要的时候再通过 **PowerSwitcher** 快速切换到 **高性能模式** 。
+
+##### 开机慢
+
+由于是机械硬盘，正常开机需要一分半，启用 **快速启动** 之后一般在 **30** 秒以内。
+
+##### 通过 PE 安装系统
+
+试了下引导菜单是能进 **PE** 的，官方启动盘也是可行的，虽然没有走完全部流程，理论上应该是可行的。名为 **Windows** 的是 **Legacy** 启动盘，名为 **EFI Boot** 的是 **UEFI** 启动盘。
+
+![macOS 启动管理器](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/macos_startup_manager.png)
+
+从 **Windows** 重启进引导菜单可能会无法识别 **USB 启动盘** ，可以试试先进 **macOS** 后再重启。
 
 #### 重装系统
 
@@ -1074,7 +1202,7 @@
 
   > 通常的 **PE** 不包含此脚本依赖的 `choice.exe` 和 `cscript.exe` ，理论上来说从 `%SystemDrive%\Windows\System32` 目录下复制一份到脚本目录下可以直接用。
   >
-  > ![系统目录迁移工具](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/system_folder_transfer_dependencies.png)
+  > ![系统目录迁移工具](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/system_folder_transfer_dependencies.png)
   >
   > 另外，使用 **xcopy** 复制的时候个别文件可能会无法复制，就我的经验来说应该是没什么大问题的。
   >
@@ -1082,7 +1210,7 @@
 
   本来以前就只是 `xcopy ... && rmdir ... && mklink ...` 这样简单地写了个脚本，每次重装完系统无脑跑一跑就完事了。写这篇文章的时候也不知道想的就改成了一个带模拟界面的小工具，也加了很多校验，相对来说更方便了，也不容易出错了。
 
-  ![系统目录迁移工具](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/system_folder_transfer.png)
+  ![系统目录迁移工具](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/system_folder_transfer.png)
 
   一般只迁移 `Users` 和 `ProgramData` 两个目录就够了，`Program Files` 没有备份的必要，这样既省时间也省空间。日常使用的时候，常用软件安装到其他分区，一些临时安装的软件可以直接无脑安装到默认的 `%SystemDrive%\Program Files` 下，重装系统的时候可以顺带清理掉。
 
@@ -1164,13 +1292,13 @@
 
 重新安装一个系统应该能修复这个问题，临时解决办法：利用 [BOOTICE](http://bbs.wuyou.net/forum.php?mod=viewthread&tid=57675) 启用旧版的引导菜单。
 
-![修改 BCD 引导菜单](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/bcd_editor.png)
+![修改 BCD 引导菜单](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/bcd_editor.png)
 
 #### 电脑突然变得很卡
 
-- 开了 **节能模式** 导致 **倍频** 被限制，打开 **高性能模式** 即可。
+- 开了 **节能模式** 导致 **倍频** 被限制，打开 **高性能模式** 或 **平衡模式** 即可。
 
-  ![电源计划](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/power_plan.png)
+  ![电源计划](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/power_plan.png)
 
 - **Windows Update** 服务在后台偷跑。
 
@@ -1197,6 +1325,12 @@
 - 内存使用超出限制
 
   我在 [记一次 win10 下的内存泄漏分析](https://www.jianshu.com/p/7510e57aeaff) 一文中提过的，实际的物理内存耗尽以后就会频繁使用由硬盘构成的虚拟内存，硬盘读写速度相对来说会慢很多，就会引起卡顿。
+
+#### 系统更新后关机卡住
+
+遇到过几次，共同点就是系统更新过且关机的时候断网了（ 不管是真机还是虚拟机 ），临时解决办法就是硬件强制关机。如果真的是有些设置需要在关机的时候联网就太恶心了。
+
+![系统更新后关机卡住](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/windows_shutdown_block.png)
 
 #### BIOS 启动模式
 
@@ -1243,7 +1377,7 @@
 
 两种硬盘模式的区别自行了解，经过我的跑分测试，开启 **AHCI** 后对 **机械硬盘** 几乎没影响，而 **固态硬盘** 的跑分能提升 **2 倍** 。如果你用的是 **固态硬盘** + **Windows 10** ，那么强烈推荐开启 **AHCI** 。
 
-![IDE / AHCI](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/imgs/ide_ahci_compare.png)
+![IDE / AHCI](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/ide_ahci_compare.png)
 
 理论上哪种模式下安装的系统就只能通过哪种模式来启动，要想切换模式只能重装系统。**但实际情况下可以通过修改注册表来实现免重装系统切换模式。**
 
