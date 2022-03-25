@@ -4,9 +4,7 @@
 
 记录一下自己使用的 [Chrome 插件](https://chrome.google.com/webstore/category/extensions) 。
 
-> **注意**
->
-> 下面的插件链接需要 **科学上网** ，可以自行搜索插件名安装。
+**插件链接打不开的话 ，可以自行搜索插件名安装。（ [Crx 搜搜](https://www.crxsoso.com/) ）**
 
 ![cover](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Chrome%20插件整理/imgs/cover.png)
 
@@ -22,7 +20,7 @@
 
   > **更新**
   >
-  > **Chrome** `89+` 支持 **阅读清单** ，相当于这个插件的精简版。这个功能目前还比较隐蔽，我也是一次点击收藏时弹出了 **添加到读取列表** 的选项菜单才无意发现的。右键 **书签栏** 可切换是否显示 **阅读清单按钮** 。
+  > **Chrome** `89+` 支持 **阅读清单** ，相当于这个插件的精简版。这个功能目前还比较隐蔽，我也是一次点击收藏时弹出了 **添加到读取列表** 的选项菜单才无意发现的。右键 **书签栏** 可切换是否显示 **阅读清单按钮** （ 新版中合并到 **侧边栏** 里面了 ）。
 
 - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 
@@ -78,7 +76,7 @@
 
 - [超级书签](https://www.baiduyun.wiki/tool/bookmark.html)
 
-  > 不用安装任何插件，帮你搞定 **显示星号密码** ，**解除网页右键/复制限制** ，**网页自由编辑** ，**免翻墙下载浏览器扩展** 。
+  > 不用安装任何插件，帮你搞定 **显示星号密码** ，**解除网页右键/复制限制** ，**网页自由编辑** ，**下载浏览器扩展** 、 **网页标注** 。
 
 ### 书签类
 
@@ -87,6 +85,10 @@
 - [书签侧边栏](https://chrome.google.com/webstore/detail/bookmark-sidebar/jdbnofccmhefkmjbkkdkfiicjkgofkdh)
 
   > 直接在当前页面的侧边栏显示书签，支持搜索、保持筛选结果，比浏览器自带的书签体验好了很多。
+
+  > **更新**
+  >
+  > **Chrome** `98` 默认开启 **侧边栏** 功能，目前只支持单击打开页面。（ [参考](https://www.cnblogs.com/billyme/p/15912324.html) ）
 
 - [Bookmarkie](https://chrome.google.com/webstore/detail/bookmarkie-bookmarks-in-a/ahlphbdcaacfhkiajebghpngknafklbj)
 
@@ -139,6 +141,10 @@
 ### Git
 
 ---
+
+- [Git Master](https://chrome.google.com/webstore/detail/git-master/klmeolbcejnhefkapdchfhlhhjgobhmo)
+
+  可以算是 **Octotree** 免费版的升级，功能更多，代码树支持 `GitHub` 、 `GitLab` 、 `Gitee` 、 `Gitea` 、 `Gogs` （ [参考](https://github.com/ineo6/git-master/blob/master/README.zh-CN.md) ）。 不过加载有延迟，没有 **Octotree** 丝滑。
 
 - [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
 
