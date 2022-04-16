@@ -20,7 +20,7 @@
 
 这里推荐两种方式进行安装：
 
-#### 使用微软官方工具 [media creation tool](https://www.microsoft.com/zh-cn/software-download/windows10) 制作系统安装 U 盘
+#### 使用微软官方工具 [media creation tool](https://www.microsoft.com/software-download/windows10) 制作系统安装 U 盘
 
 > 直接 **百度 - 下载 win10** 即可，注意选带 **`[官方]`** 认证小尾巴的链接。
 
@@ -30,7 +30,7 @@
 
 #### 制作 PE 系统 ，在 PE 中使用 Windows 官方镜像完成安装
 
-> [Windows PE (WinPE)](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/winpe-intro) 是一个小型操作系统，用于安装、部署和修复 Windows 10 桌面版（家庭版、专业版、企业版和教育版）、Windows Server 和其他 Windows 操作系统。 通过 Windows PE，你可以：
+> [Windows PE (WinPE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) 是一个小型操作系统，用于安装、部署和修复 Windows 10 桌面版（家庭版、专业版、企业版和教育版）、Windows Server 和其他 Windows 操作系统。 通过 Windows PE，你可以：
 >
 > - 在安装 Windows 之前设置硬盘。
 > - 使用来自网络或本地驱动器的应用或脚本安装 Windows。
@@ -46,7 +46,7 @@
 
 市面上常见的 **PE 工具** 其实就是在 **WinPE** 的基础上做了工具整合和定制，一般在界面、内置工具、侵入程度上有所差异，看个人喜好进行选择吧。有的 **PE 工具** 在启动菜单中直接添加了 **安装系统** 的选项，不需要进入 **PE 系统** 就可以进行傻瓜式安装，不过我个人还是倾向于进入 **PE 系统** 再安装系统，适合个性化的操作。我用过的有 [老毛桃](https://www.laomaotao.net) 、[大白菜](https://www.dabaicai.com) 、 [微 PE](http://www.wepe.com.cn) ，其中 **微 PE** 最简洁好用，下文也是以它作为操作环境。也有人推荐 [IT 天空](https://www.itsk.com) 的 [优启通](https://www.upe.net) ，不过我没用过。
 
-**PE** 的桌面通常会提供 [Windows 安装器](http://www.wepe.com.cn/ubook/installtool.html) ，可以定制安装过程和安装内容，鉴于界面比较简陋且操作相对复杂，我还是选择原汁原味的镜像安装程序。这次特意试了下 [使用 Dism++ 安装系统](https://www.chuyu.me/zh-Hans/Document.html?file=Best/%E4%BD%BF%E7%94%A8Dism++%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F.md) ，真的很方便。**Dism++** 的 **释放映像** 功能不仅可以用于还原我们的备份，还可以直接安装官方原版系统镜像，重启后就直接进入 **海内存知己...** 的初始化设置界面了，很适合给空硬盘 **预装系统**（ 安装前先手动分区 ）。
+**PE** 的桌面通常会提供 [Windows 安装器](http://www.wepe.com.cn/ubook/installtool.html) ，可以定制安装过程和安装内容，鉴于界面比较简陋且操作相对复杂，我还是选择原汁原味的镜像安装程序。这次特意试了下 [使用 Dism++ 安装系统](https://www.chuyu.me/zh-Hans/Document.html?file=Best/使用Dism++安装系统.md) ，真的很方便。**Dism++** 的 **释放映像** 功能不仅可以用于还原我们的备份，还可以直接安装官方原版系统镜像，重启后就直接进入 **海内存知己...** 的初始化设置界面了，很适合给空硬盘 **预装系统**（ 安装前先手动分区 ）。
 
 > 插句题外话，自从我学会装系统以后一直是用 **PE** 的，这次为了写文章才特地去查了下有什么新的方法，结果遍地都是捧 **微软官方工具** 而踩 **PE** 的，**PE** 好像过街老鼠一样，不知怎么的还和盗版扯上了关系。
 >
@@ -82,7 +82,7 @@
 
 ##### [MSDN, 我告诉你](https://msdn.itellyou.cn)
 
-一个个人维护的非微软官方网站，但几乎能下载到各个主要版本的 **Windows 镜像** ，也是大家都比较推荐的一个良心网站。要说缺点的话就是下载方式是 [ed2k](https://baike.baidu.com/item/ed2k) 协议的，国内支持的软件估计只有垃圾迅雷了吧（ [闪电下载](http://bbs.xiaokanba.com/download.html) 其实也可以 ）。目前这个网站 [新版](https://next.itellyou.cn) 开放测试，支持 [BT 下载](https://baike.baidu.com/item/BT%E4%B8%8B%E8%BD%BD) ，可以使用 [Xdown](http://xdown.org) 这个工具进行下载，当然 [P2P 技术](https://baike.baidu.com/item/%E5%AF%B9%E7%AD%89%E7%BD%91%E7%BB%9C) 嘛，下载速度就时快时慢了，看缘分。
+一个个人维护的非微软官方网站，但几乎能下载到各个主要版本的 **Windows 镜像** ，也是大家都比较推荐的一个良心网站。要说缺点的话就是下载方式是 [ed2k](https://baike.baidu.com/item/ed2k) 协议的，国内支持的软件估计只有垃圾迅雷了吧（ [闪电下载](http://bbs.xiaokanba.com/download.html) 其实也可以 ）。目前这个网站 [新版](https://next.itellyou.cn) 开放测试，支持 [BT 下载](https://baike.baidu.com/item/BT下载) ，可以使用 [Xdown](http://xdown.org) 这个工具进行下载，当然 [P2P 技术](https://baike.baidu.com/item/对等网络) 嘛，下载速度就时快时慢了，看缘分。
 
 下载完成后推荐使用 [iHasher](https://share.weiyun.com/5gtDK6E) 进行 [SHA1](https://baike.baidu.com/item/SHA-1) 校验，即使是别处下载的镜像也可以在线对比获取版本信息。
 
@@ -92,7 +92,7 @@
 
 官方工具不仅用于制作启动盘，还可以只下载 **ISO 镜像** （ 仅包含有限版本 ），速度非常快，我 **100 M** 的电信宽带基本上能跑满 **10 MB/s** ，等待十几分钟即可。
 
-[Windows 11 官网页面](https://www.microsoft.com/zh-cn/software-download/windows11) 直接提供了下载链接（ 包含完整版本 ），借助 [IDM](http://www.internetdownloadmanager.com) + **HTTP 代理** 下载速度也很快。
+[Windows 11 官网页面](https://www.microsoft.com/software-download/windows11) 直接提供了下载链接（ 包含完整版本 ），借助 [IDM](http://www.internetdownloadmanager.com) + **HTTP 代理** 下载速度也很快。
 
 > **MediaCreationTool** 的下载目录为 `%SystemDrive%\ESD\Download` ，每次执行都会重新下载临时文件，即使把中间产物 `installx64.esd` 备份后再直接放到这个路径下还是会重新下载。`installx64.esd` 的后加工产物临时文件在 `%SystemDrive%\$Windows.~WS\Sources` 目录下，安装完成后会自动清除。
 
@@ -122,7 +122,7 @@
 
 如果磁盘中原先已经装有系统 ，则需要在开机启动时按 **F1** ~ **F12** 以及 **DEL** 中的某个键以打开 **启动菜单**，选择从 **U 盘** 启动，或者进入 **BIOS** 后将 **U 盘** 的 **启动顺序** 调到最前面。
 
-> 各个品牌的快捷键不同，一般启动画面下方有文字提示（ 可以录像看回放 ），或者自行去查询。（ [参考](http://www.wepe.com.cn/ubook/bootpe.html#_1-2-%E5%A6%82%E4%BD%95%E8%BF%9B%E5%85%A5pe%E7%B3%BB%E7%BB%9F) ）
+> 各个品牌的快捷键不同，一般启动画面下方有文字提示（ 可以录像看回放 ），或者自行去查询。（ [参考](http://www.wepe.com.cn/ubook/bootpe.html#_1-2-如何进入pe系统) ）
 >
 > 至于在 **启动顺序菜单** 中如何区分磁盘，一般看品牌名和容量就好了，支持 **UEFI** 启动的会以 **UEFI** 开头标识。
 >
@@ -207,11 +207,11 @@
 
   ![错误 - 磁盘分区空间不足](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_1.png)
 
-- 磁盘分区格式不对（ [参考](https://answers.microsoft.com/zh-hans/windows/forum/all/win10%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0%E9%97%AE/d724cf43-b1c8-4379-ac33-788af0b74003) ）
+- 磁盘分区格式不对（ [参考](https://answers.microsoft.com/zh-hans/windows/forum/all/win10安装出现问/d724cf43-b1c8-4379-ac33-788af0b74003) ）
 
   ![错误 - 磁盘分区格式不对](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/iso_error_2.png)
 
-  **磁盘分区格式** 和 **BIOS 启动模式** 是有对应关系的，通常是 [**MBR + Legacy**](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions) 和 [**GPT + UEFI**](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions) 两种组合，显而易见要解决这个错误无非就是修改 **磁盘分区格式** 或者 **BIOS 启动模式** ，更多详情见 [文末](#BIOS-启动模式) 。
+  **磁盘分区格式** 和 **BIOS 启动模式** 是有对应关系的，通常是 [**MBR + Legacy**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions) 和 [**GPT + UEFI**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions) 两种组合，显而易见要解决这个错误无非就是修改 **磁盘分区格式** 或者 **BIOS 启动模式** ，更多详情见 [文末](#BIOS-启动模式) 。
 
   > 一般重装系统的话还是建议修改 **BIOS 启动模式** 而不是 **磁盘分区格式** ，以避免不必要的数据损坏。新装还是推荐 **GPT + UEFI** 的组合，毕竟这才是未来的趋势。
 
@@ -239,7 +239,7 @@
 
 ![海内存知己，天涯若比邻](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/windows_setup.png)
 
-后面就没什么好讲的，一步一步设置就好了，**请坐和放宽** 。建议这里插网线并登录 **微软账户** ，之后直接自动下载驱动一步到位。
+后面就没什么好讲的，一步一步设置就好了，**请坐和放宽** 。建议这里插网线并登录 **微软帐户** ，之后直接自动下载驱动一步到位。
 
 > **注意**
 >
@@ -255,10 +255,10 @@
 
 ![激活 Windows](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/activation_1.png)
 
-根据官方文档的描述，理论上应该是如果 [微软账户](https://account.microsoft.com) 绑定了 **数字许可证** 的话，即使更换了电脑也能直接激活 **Windows 10** ，但实际上我的账户（ 在 **Windows 10 早期开发者预览版** 的时候注册的 ）换电脑后并不能激活。
+根据官方文档的描述，理论上应该是如果 [微软帐户](https://account.microsoft.com) 绑定了 **数字许可证** 的话，即使更换了电脑也能直接激活 **Windows 10** ，但实际上我的帐户（ 在 **Windows 10 早期开发者预览版** 的时候注册的 ）换电脑后并不能激活。
 
-- [激活 Windows](https://support.microsoft.com/zh-cn/windows/%E6%BF%80%E6%B4%BB-windows-c39005d4-95ee-b91e-b399-2820fda32227)
-- [在更换硬件后重新激活 Windows 10](https://support.microsoft.com/zh-cn/windows/%E5%9C%A8%E6%9B%B4%E6%8D%A2%E7%A1%AC%E4%BB%B6%E5%90%8E%E9%87%8D%E6%96%B0%E6%BF%80%E6%B4%BB-windows-10-2c0e962a-f04c-145b-6ead-fb3fc72b6665)
+- [激活 Windows](https://support.microsoft.com/windows/activate-windows-c39005d4-95ee-b91e-b399-2820fda32227)
+- [在更换硬件后重新激活 Windows](https://support.microsoft.com/windows/reactivating-windows-after-a-hardware-change-2c0e962a-f04c-145b-6ead-fb3fc72b6665)
 
 ![Windows 未激活](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/activation_2.png)
 
@@ -321,7 +321,7 @@
 
 > 桌面右键 > 个性化
 
-- [必应壁纸](https://www.microsoft.com/zh-cn/bing/bing-wallpaper) - 将桌面壁纸同步为 [必应搜索](https://bing.com) 网站的每日壁纸。
+- [必应壁纸](https://www.microsoft.com/bing/bing-wallpaper) - 将桌面壁纸同步为 [必应搜索](https://bing.com) 网站的每日壁纸。
 
 - [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine) - 酷炫的壁纸效果，可交互，资源丰富。（ 比较吃显卡 ）
 
@@ -343,7 +343,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers
 
 ##### [任务栏图标居中](https://jingyan.baidu.com/article/d8072ac4689a1dec95cefdfd.html)
 
-个人觉得 **仿 Dock 栏** 和 **Windows** 风格很不搭，显得不伦不类，简单居中图标就行了，而且 [Windows 11](https://www.microsoft.com/zh-cn/windows/windows-11) 默认支持居中了。
+个人觉得 **仿 Dock 栏** 和 **Windows** 风格很不搭，显得不伦不类，简单居中图标就行了，而且 [Windows 11](https://www.microsoft.com/windows/windows-11) 默认支持居中了。
 
 ##### 隐藏默认的任务栏图标
 
@@ -477,9 +477,9 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers
 
 **QQ** 的话比较恶心，以前只要安装 **微软常用运行库合集** 就可以修复了，之后又需要备份 **QQ 安全组件（ QQProtect ）** ，再到现在不得不重装。不过保存好 **个人文件夹** 即使重装了数据应该也不会丢失。
 
-微软自家的 [Visual Studio](https://visualstudio.microsoft.com) 和 [Office](https://www.microsoft.com/zh-cn/microsoft-365/microsoft-office) 尽管提供了自定义安装路径的选项，但还是会和系统文件做 **PY 交易** ，做不到绿色纯净，还不如无脑安装到系统盘，重装系统后再重装它们。
+微软自家的 [Visual Studio](https://visualstudio.microsoft.com) 和 [Office](https://www.microsoft.com/microsoft-365/microsoft-office) 尽管提供了自定义安装路径的选项，但还是会和系统文件做 **PY 交易** ，做不到绿色纯净，还不如无脑安装到系统盘，重装系统后再重装它们。
 
-> 推荐使用 [Office Tool Plus](https://otp.landian.vip/zh-cn) 下载安装纯净的 **Office** ，同时也支持对 **Office** 进行管理。
+> 推荐使用 [Office Tool Plus](https://otp.landian.vip) 下载安装纯净的 **Office** ，同时也支持对 **Office** 进行管理。
 
 ##### 环境变量设置
 
@@ -511,7 +511,7 @@ tskill explorer
   >
   > 需要 **管理员权限** 运行的程序放这里是无法开机启动的。
 
-- [**计划任务** 中添加任务](https://anyesu.github.io/blog/articles/8#WSL%20%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8)
+- [**计划任务** 中添加任务](https://anyesu.github.io/blog/articles/8#WSL%20开机启动)
 
   支持更高级的开机启动配置。
 
@@ -570,9 +570,9 @@ powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 
 #### 关于 Windows 11
 
-**2021-10-05** 微软正式发布 [Windows 11](https://www.microsoft.com/zh-cn/windows/windows-11) ，但还是不怎么稳定， 主力电脑不建议升级（ **主要考虑到会乱删文件** ），可以用其他设备尝鲜。
+**2021-10-05** 微软正式发布 [Windows 11](https://www.microsoft.com/windows/windows-11) ，但还是不怎么稳定， 主力电脑不建议升级（ **主要考虑到会乱删文件** ），可以用其他设备尝鲜。
 
-我的新电脑在 **Windows 10** 下已经通过了 [电脑健康状况检查应用](https://www.microsoft.com/zh-cn/windows/windows-11#pchealthcheck) 的检测，但在 **PE** 下还是不能直接安装（ ~~可能是需要对应的 **win11 PE**~~ ， [微 PE V2.2 已修复这个问题](https://www.wepe.com.cn/update/update2.2.html) ），可以用 **Dism++** 直接释放镜像来绕过检测。至于实际不满足条件的老设备还是不建议升级，毕竟官方不再保证兼容了。
+我的新电脑在 **Windows 10** 下已经通过了 [电脑健康状况检查应用](https://www.microsoft.com/windows/windows-11#pchealthcheck) 的检测，但在 **PE** 下还是不能直接安装（ ~~可能是需要对应的 **win11 PE**~~ ， [微 PE V2.2 已修复这个问题](https://www.wepe.com.cn/update/update2.2.html) ），可以用 **Dism++** 直接释放镜像来绕过检测。至于实际不满足条件的老设备还是不建议升级，毕竟官方不再保证兼容了。
 
 ![无法安装 Windows 11](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/win11_can_not_install.png)
 
@@ -590,11 +590,11 @@ powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 
 ##### 在新 Mac 上安装 Windows
 
-我没试过，可以看下官方文档（ [Windows 7](https://support.apple.com/zh-cn/HT205016) / [Windows 10](https://support.apple.com/zh-cn/HT201468) ），关键是分区，分完区之后的安装应该简单的。
+我没试过，可以看下官方文档（ [Windows 7](https://support.apple.com/HT205016) / [Windows 10](https://support.apple.com/HT201468) ），关键是分区，分完区之后的安装应该简单的。
 
 ##### 在 Windows 和 macOS 之间切换
 
-重新启动，然后在启动过程中按住 `Option` （ 或 `Alt` ）⌥ 键，即可 [在 Windows 和 macOS 之间切换](https://support.apple.com/zh-cn/HT208123) 。
+重新启动，然后在启动过程中按住 `Option` （ 或 `Alt` ）⌥ 键，即可 [在 Windows 和 macOS 之间切换](https://support.apple.com/HT208123) 。
 
 ##### 未能找到 macOS 启动卷宗的位置
 
@@ -606,9 +606,9 @@ powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 
 ##### 保持 Windows 默认启动
 
-进入 **macOS** 后重启默认还是会启动 **macOS** ，点击左上角 **苹果菜单** > **系统偏好设置** > **启动磁盘** ，选中想要使用的磁盘的图标，然后 **重新启动** 。（ [参考](https://support.apple.com/zh-cn/guide/mac-help/mchlp1034/mac) ）
+进入 **macOS** 后重启默认还是会启动 **macOS** ，点击左上角 **苹果菜单** > **系统偏好设置** > **启动磁盘** ，选中想要使用的磁盘的图标，然后 **重新启动** 。（ [参考](https://support.apple.com/guide/mac-help/mchlp1034/mac) ）
 
-如果左下角的锁被锁定，点击锁按钮以 [解锁偏好设置面板](https://support.apple.com/zh-cn/guide/mac-help/aside/glosf17cc995) 。
+如果左下角的锁被锁定，点击锁按钮以 [解锁偏好设置面板](https://support.apple.com/guide/mac-help/aside/glosf17cc995) 。
 
 ##### 驱动安装
 
@@ -616,7 +616,7 @@ powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 
 > **Boot Camp** 有两个概念，一个是在 **Mac** 下用于安装 **Windows** 的安装器，中文名叫 **启动转换助理** ，另一个则是由 **Apple** 提供的最新 **Windows** 支持软件（ 驱动程序 ），包括 `F1 - F12` 功能快捷键、触摸板、显卡、声卡、网卡等驱动。
 
-本想从 [苹果官网下载](https://support.apple.com/zh_CN/downloads/Boot-Camp) ，但发现很零碎， [兼容性](https://xitongtiankong.com/archives/212) 也对不上，还是回 **macOS** 通过 **转换助理** 下载（ [参考](https://support.apple.com/zh-cn/HT204923) ）：只勾选 **从 Apple 下载最新的 Windows 支持软件** > 选择用于存储的 **U 盘** > 开始自动下载。
+本想从 [苹果官网下载](https://support.apple.com/downloads/Boot-Camp) ，但发现很零碎， [兼容性](https://xitongtiankong.com/archives/212) 也对不上，还是回 **macOS** 通过 **转换助理** 下载（ [参考](https://support.apple.com/HT204923) ）：只勾选 **从 Apple 下载最新的 Windows 支持软件** > 选择用于存储的 **U 盘** > 开始自动下载。
 
 下载完成会添加下面的文件（ **6136** 版大概 **2.6 G** ）到 **U 盘** 中，应该不会清空 **U 盘** 不过最好还是备份下重要数据。
 
@@ -742,11 +742,35 @@ BootCamp（文件夹）
 
 #### 备份还原系统
 
-用 **Dism++** 备份系统非常方便（ [文档](https://www.chuyu.me/zh-Hans/Document.html?file=Quickstart.md#%E5%A4%87%E4%BB%BD%E7%B3%BB%E7%BB%9F) ），可以增量备份（ 一个备份文件保存多个版本 ），还可以还原到任意分区（ 还原后目标分区可能需要重新 [4K 对齐](https://www.disktool.cn/jiaocheng/align-check.html) ）。
+用 **Dism++** 备份系统非常方便（ [文档](https://www.chuyu.me/zh-Hans/Document.html?file=Quickstart.md#备份系统) ），可以增量备份（ 一个备份文件保存多个版本 ），还可以还原到任意分区（ 还原后目标分区可能需要重新 [4K 对齐](https://www.disktool.cn/jiaocheng/align-check.html) ）。
 
 系统安装完成并且各种琐碎的通用配置都弄好的时候建议做一次备份以备不时之需。系统挂了之后用还原比重装系统省事多了，经历过几次深有体会。
 
-值得一提的是，由于还原后还是原来的账户，文件权限这块毫无障碍，许多残留的配置可以直接使用，没清空的回收站也可以直接查看，不像重装后留下一堆不可访问的回收站目录。
+值得一提的是，由于还原后还是原来的帐户，文件权限这块毫无障碍，许多残留的配置可以直接使用，没清空的回收站也可以直接查看，不像重装后留下一堆不可访问的回收站目录。
+
+##### 备份时机
+
+- 系统安装完设置好帐户后就重启进 **PE** 进行第一次备份。
+
+  此时的系统是最干净的。
+
+- 安装适当的驱动后进行第二次备份（ 增量备份 ）。
+
+  出于安全考虑，很长时间（ 可能是几个月 ）之后再还原备份的时候在线帐户需要重置 **PIN** ，如果无法联网就会比较尴尬，所以我一般会内置无线网卡驱动。另外像显卡驱动这样经常需要升级的就没必要内置进去了，太占体积了。
+
+- 根据配置清单做一些通用的配置后进行第三次备份。
+
+  以后需要还原系统主要是还原到这个版本，可以保证还原后能无缝投入使用。这些配置项（ 比如开发环境还有上文提到的优化、美化等内容 ）通常比较繁琐，东点点西点点很容易就忘了接下来要做什么，所以建议把必要的操作步骤记录下来，按顺序配置下来就很方便。
+
+  如果经过一段时间使用后发现配置不太满意需要调整可以回到上一个版本重新配置。
+
+##### 备份要点
+
+- 每次备份前用软媒魔方清理下系统垃圾和操作记录，有必要还可以清理下注册表，另外 **Dism++** 备份的时候会忽略掉一些缓存目录（ **%TEMP%** ），就不需要手动清理了。这样可以减小备份的大小，也可以避免夹杂隐私数据。
+- 像 **Office** 这样较大型的软件不建议内置到备份中，会导致备份大小显著增大，最好是还原系统再后一次性安装。
+- 做备份的时候不要包含符号链接，因为还原后可能会失效，而且容易导致数据不一致，最好还是投入正式使用前再做 [目录迁移](#迁移系统目录) 。
+
+目前 **Windows 11** 出来以后 **Windows 10** 基本算是走到头了，可以一个备份用到老。
 
 #### 迁移系统目录
 
@@ -765,11 +789,15 @@ BootCamp（文件夹）
 
 **这个方法我从 2016 年开始一直在使用，至今基本上没发现什么问题（ 前提是迁移没出错且系统能正常运行 ）。**
 
-> **注意**
->
-> 建议系统装完进桌面后就可以开始迁移了，失败了可以直接重装（ 挪坏了不要找我 ）。
+最近重装系统时发现了一个例外—— [英特尔核显驱动](https://www.intel.cn/content/www/cn/zh/download/19344/intel-graphics-windows-dch-drivers.html) ，安装了驱动之后系统设置就坏掉打不开了（ 如下图所示 ），反复重装系统都不行，最严重的时候任务栏、开始菜单、任务管理器、快捷键全崩了，只能看着桌面干瞪眼。经过排查发现是因为 **ProgramData** 目录做了符号链接，而核显驱动安装包自解压运行后把这个符号链接删掉了！！！之后系统会自动创建空的 **ProgramData** 目录，这就导致了系统内置应用都无法正常运行。
 
-迁移步骤：
+![系统设置损坏无法打开](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Windows%20系统安装/imgs/ms_settings_error.png)
+
+**解决办法：**
+
+出现这个问题的时候还有一个标志就是驱动安装程序会提示 **“未找到在当前设备上可安装的驱动程序”** 错误，关了重新打开安装包就能正常安装了，等驱动安装完进 **PE** 恢复这个符号链接即可修复。缺点就是会丢失出错之后的 **ProgramData** 数据（ 应该问题不大 ），我还是建议调整操作顺序： **安装这个驱动之后再做目录迁移** 。
+
+##### 迁移步骤
 
 - 进入 **PE 系统**
 
@@ -779,7 +807,7 @@ BootCamp（文件夹）
 
   > **注意**
   >
-  > [PE 下的盘符顺序和本地系统内很可能不同](http://www.wepe.com.cn/ubook/checktable.html#pe%E4%B8%8B%E7%9A%84%E7%9B%98%E7%AC%A6%E9%A1%BA%E5%BA%8F%E5%92%8C%E6%9C%AC%E5%9C%B0%E7%B3%BB%E7%BB%9F%E5%86%85%E5%BE%88%E5%8F%AF%E8%83%BD%E4%B8%8D%E5%90%8C) ，进行迁移前建议在 **PE** 下将迁移目录所在盘符修改为本地系统显示的盘符，系统所在的盘符可以不用修改。
+  > [PE 下的盘符顺序和本地系统内很可能不同](http://www.wepe.com.cn/ubook/checktable.html#pe下的盘符顺序和本地系统内很可能不同) ，进行迁移前建议在 **PE** 下将迁移目录所在盘符修改为本地系统显示的盘符，系统所在的盘符可以不用修改。
   >
   > **修改方法：开始菜单 - 所有程序 - 分区工具 - 系统自带磁盘管理 - 找到分区右键更改驱动器号，盘符被占用就先替换成未使用的。**
 
@@ -1277,9 +1305,9 @@ BootCamp（文件夹）
 
   捣鼓完网卡驱动想看看 **网络重置** 能不能恢复，然后就崩了。
 
-遇到上面这些情况（ 除了最后一种 ）基本只有重装系统的份了，虽然 **Windows** 提供了 **恢复环境** （ [Windows RE](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) ），但你都不知道哪里出错了又谈何去修复呢，而且用的还是没有文档的命令行工具。
+遇到上面这些情况（ 除了最后一种 ）基本只有重装系统的份了，虽然 **Windows** 提供了 **恢复环境** （ [Windows RE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) ），但你都不知道哪里出错了又谈何去修复呢，而且用的还是没有文档的命令行工具。
 
-再说说 **系统还原点** 这个鸡肋功能，**Windows 10** [默认是关闭这个功能](https://docs.microsoft.com/zh-CN/troubleshoot/windows-client/deployment/system-restore-points-disabled) 的，等你想到还原的时候才会发现没有还原点可以用，或者说即使开启了也并不能保证能还原成功（ **能成功是你的幸运，失败是常态** ）。而且什么时候应该创建还原点，还原点又备份了什么内容，还原之后的程序和用户数据是否冲突更是一系列头痛的问题。
+再说说 **系统还原点** 这个鸡肋功能，**Windows 10** [默认是关闭这个功能](https://docs.microsoft.com/troubleshoot/windows-client/deployment/system-restore-points-disabled) 的，等你想到还原的时候才会发现没有还原点可以用，或者说即使开启了也并不能保证能还原成功（ **能成功是你的幸运，失败是常态** ）。而且什么时候应该创建还原点，还原点又备份了什么内容，还原之后的程序和用户数据是否冲突更是一系列头痛的问题。
 
 **不要把希望寄托在系统自带的恢复工具上，平时要养成良好的使用习惯，系统文件和用户数据要隔离开，重要文件定期备份，即使要重装系统了也能从容应对。**
 
@@ -1483,4 +1511,4 @@ BootCamp（文件夹）
 
 ---
 
-#### 转载请注明出处：[https://github.com/anyesu/blog/issues/38](https://anyesu.github.io/blog/articles/38)
+#### 转载请注明出处： [https://github.com/anyesu/blog/issues/38](https://anyesu.github.io/blog/articles/38)
