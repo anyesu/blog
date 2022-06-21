@@ -323,6 +323,10 @@
 
   **plugin.xml** 增强。
 
+  忘了从什么时候起，注解和 **JavaDoc** 中的关键字都被翻译成中文了，一直以为是 **IDEA** 更新后的新功能或者翻译插件造成的，就没去管它。最近想好好写下注释，但发现 **JavaDoc** 行首的星号被隐藏了，每次都要点开看才能知道是被隐藏了还是真漏写了，这也太过分了。 [搜了一圈](https://www.v2ex.com/t/758699) 后发现竟然是这个八竿子打不着的插件导致的（ [翻译配置文件](https://github.com/beansoft/visualgc_java8/blob/master/devkit-helper/resources/messages/JavaDocBundle_zh_CN.properties) ）。
+
+  ![BUG - Plug-in DevKit Helper](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/IntelliJ%20IDEA%20插件和经验分享/imgs/plug_in_devkit_helper_bug.png)
+
 #### 第三方语法支持
 
 - [.env files support](https://plugins.jetbrains.com/plugin/9525--env-files-support)
