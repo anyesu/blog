@@ -1,0 +1,5 @@
+# defaults:
+# - node_modules/ is ignored.
+# - Dotfiles (include .eslintrc.*) as well as Dotfolders and their contents are ignored.
+/*
+!/scripts

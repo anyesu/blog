@@ -1,0 +1,47 @@
+{
+  "name": "@anyesu/blog",
+  "version": "0.0.0",
+  "private": true,
+  "description": "https://anyesu.github.io",
+  "keywords": [
+    "blog",
+    "github"
+  ],
+  "homepage": "https://anyesu.github.io",
+  "bugs": {
+    "url": "https://github.com/anyesu/blog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anyesu/blog"
+  },
+  "license": "MIT",
+  "author": "anyesu (https://github.com/anyesu)",
+  "type": "module",
+  "scripts": {
+    "lint": "run-s -snc lint:*",
+    "lint-staged:eslint": "eslint --cache --ext .js,.cjs,.mjs,.ts,.cts,.mts --format friendly",
+    "lint-staged:prettier": "prettier --write",
+    "lint:eslint": "npm run lint-staged:eslint -- .",
+    "lint:prettier": "prettier -c .",
+    "lint:tsc": "tsc --noEmit -p ."
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "3.4.0",
+    "@tsconfig/recommended": "1.0.3",
+    "@vue/eslint-config-prettier": "7.0.0",
+    "@vue/eslint-config-typescript": "11.0.3",
+    "chokidar": "3.5.3",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-formatter-friendly": "7.0.0",
+    "eslint-plugin-n": "16.1.0",
+    "eslint-plugin-regexp": "1.15.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.8.8",
+    "prettier-plugin-organize-attributes": "0.0.5",
+    "prettier-plugin-packagejson": "2.3.0",
+    "tsx": "3.12.10",
+    "typescript": "4.6.4"
+  }
+}
