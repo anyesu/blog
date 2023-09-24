@@ -6,7 +6,7 @@ module.exports = {
   endOfLine: 'lf',
   plugins: [
     'prettier-plugin-packagejson',
-    '@trivago/prettier-plugin-sort-imports',
+    '@ianvs/prettier-plugin-sort-imports',
     './scripts/prettierWatchConfigPlugin.cjs',
   ],
   overrides: [
@@ -20,8 +20,9 @@ module.exports = {
       },
     },
   ],
-  importOrder: ['^node:.+$', '<THIRD_PARTY_MODULES>', '^[./]'],
-  importOrderSeparation: false,
-  importOrderSortSpecifiers: true,
-  importOrderGroupNamespaceSpecifiers: true,
+  importOrder: [
+    '<BUILTIN_MODULES>', // Node.js built-in modules
+    '<THIRD_PARTY_MODULES>', // Imports not matched by other special words or groups.
+    '^[.]', // relative imports
+  ],
 };
