@@ -21,7 +21,7 @@
   "scripts": {
     "postinstall": "simple-git-hooks",
     "lint": "run-s -snc lint:*",
-    "lint-staged:eslint": "eslint --cache --ext .js,.cjs,.mjs,.ts,.cts,.mts --format friendly",
+    "lint-staged:eslint": "eslint --cache --ext .js,.cjs,.mjs,.ts,.cts,.mts --format=pretty",
     "lint-staged:prettier": "prettier --write --ignore-unknown",
     "lint:eslint": "npm run lint-staged:eslint -- .",
     "lint:prettier": "prettier -c .",
@@ -43,7 +43,7 @@
     "chokidar": "3.5.3",
     "eslint": "7.32.0",
     "eslint-config-prettier": "9.0.0",
-    "eslint-formatter-friendly": "7.0.0",
+    "eslint-formatter-pretty": "5.0.0",
     "eslint-plugin-n": "16.1.0",
     "eslint-plugin-regexp": "1.15.0",
     "eslint-plugin-unicorn": "40.1.0",
