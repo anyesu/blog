@@ -1,5 +1,5 @@
-import fastJsonStableStringify from 'fast-json-stable-stringify';
 import jsonfile from 'jsonfile';
+import prettier from 'prettier';
 import { getShortPath, writeFileIfChanged } from '@utils/fs';
 import { createLogger } from '@utils/logger';
 import type { PluginConfig } from './types';
@@ -42,8 +42,13 @@ export default class Config {
   }
 
   async save() {
-    const stableConfig = JSON.parse(fastJsonStableStringify(this.data));
-    const formatted = JSON.stringify(stableConfig, undefined, 2);
+    const options = await prettier.resolveConfig(this.file);
+    const formatted = prettier.format(JSON.stringify(this.data), {
+      ...options,
+      filepath: this.file,
+      // loading other plugins may cause slow initialization
+      plugins: ['prettier-plugin-sort-json'],
+    });
     const saved = await writeFileIfChanged(this.file, formatted);
     if (saved) {
       logger.info(`save to "${this.shortPath}"`);

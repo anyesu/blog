@@ -6,6 +6,7 @@ module.exports = {
   endOfLine: 'lf',
   plugins: [
     'prettier-plugin-packagejson',
+    'prettier-plugin-sort-json',
     '@ianvs/prettier-plugin-sort-imports',
     './scripts/prettierWatchConfigPlugin.cjs',
   ],
@@ -26,4 +27,5 @@ module.exports = {
     '^(@plugins|@utils)(/.*)$', // aliases
     '^[.]', // relative imports
   ],
+  jsonRecursiveSort: true,
 };
