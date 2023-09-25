@@ -11,7 +11,11 @@
     "allowSyntheticDefaultImports": true,
     "suppressImplicitAnyIndexErrors": true,
     "noImplicitReturns": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "paths": {
+      "@plugins/*": ["./scripts/plugins/*"],
+      "@utils/*": ["./scripts/utils/*"]
+    }
   },
   "include": ["scripts/**/*.ts"]
 }
