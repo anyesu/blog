@@ -4,7 +4,7 @@
 
 去年接手的一个用 [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) 搭建的项目，启动时的进度条日志一直都是像写日志文件一样逐行打印的，而不是预期的动态刷新（ 如下图所示 ）。之前一直忙于项目开发加上这个问题也不影响项目运行就一直没有去管，最近正好空了再加上强迫症犯了，决定研究一下这个问题怎么解决。
 
-![正常进度条效果](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/cover.gif)
+![正常进度条效果](imgs/cover.gif)
 
 ### 问题复现
 
@@ -22,7 +22,7 @@ I:\这是一个中文路径\hello-world>npm run serve
 
 果然成功复现了这个问题：
 
-![逐行打印的启动日志](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/bug.png)
+![逐行打印的启动日志](imgs/bug.png)
 
 ### 问题解决
 
@@ -50,7 +50,7 @@ const writeStatusMessage = () => {
 
 但实际效果是中文字符的显示宽度比英文字符要宽，如果包含了中文字符就会导致显示内容超出一行而自动换行，所以每次清空的是多出来的第二行，而第一行内容则被保留了下来，就形成了逐行打印的效果。
 
-![调试 nodeConsole](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/debug_nodeConsole.png)
+![调试 nodeConsole](imgs/debug_nodeConsole.png)
 
 既然是显示内容超出一行了，那多截断一部分内容不就好了，在 [vue.config.js](https://cli.vuejs.org/zh/config/#vue-config-js) 文件中加入下面的代码：
 
@@ -69,7 +69,7 @@ module.exports = {
 
 原理是通过在 [@vue/cli-service](https://www.npmjs.com/package/@vue/cli-service) 之前另外添加一个 **ProgressPlugin** ，这个插件不打印内容只是起到辅助修改 `process.stderr.columns` 的作用，等同于对 **ProgressPlugin** 做了一次 **hook** 。
 
-![问题解决](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/bug_fixed.png)
+![问题解决](imgs/bug_fixed.png)
 
 再次运行就正常了，不过这个方法有点暴力直接固定死了，值设大了窗口小了还是会有问题，值设小了进度条又看不到有效信息。
 
@@ -243,7 +243,7 @@ const writeStatusMessage = () => {
 
 保存代码再次运行，可以看到超出的部分照常自动换行，但下一次打印的时候两行都清空了，完美！
 
-![调试 CSI 效果](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/debug_CSI.gif)
+![调试 CSI 效果](imgs/debug_CSI.gif)
 
 不过后来在 **CMD** 中测试的时候发现另一个问题：在新窗口中执行启动命令，第一遍的时候是好的，之后 `Ctrl + C` 结束掉再启动一遍，这时这个方法就失效了，又开始逐行打印了。
 
@@ -373,7 +373,7 @@ module.exports = {
 };
 ```
 
-![使用 webpackbar](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/webpackbar.png)
+![使用 webpackbar](imgs/webpackbar.png)
 
 同样是打印文件路径， **webpackbar** 做了处理只显示相对路径而不是绝对路径，所以就不会出现逐行打印的问题。进度条效果也比自带的漂亮多了，唯一的瑕疵就是编译完成时打印的 `Compiled successfully` 和 [@soda/friendly-errors-webpack-plugin](https://www.npmjs.com/package/@soda/friendly-errors-webpack-plugin) 的内容重复了，看其仓库也没有要改的意思（ [#13](https://github.com/unjs/webpackbar/issues/13) ），为了这个问题自定义 [reporter](https://www.npmjs.com/package/webpackbar#custom-reporters) 就过于复杂了，完全没必要。
 
@@ -402,7 +402,7 @@ module.exports = {
 
 这句 [Compiled successfully](https://github.com/sodatea/friendly-errors-webpack-plugin/blob/598bedf3baca837fb4b8cead39ba4f8c6659e3ae/src/friendly-errors-plugin.js#L85) 日志是 **@soda/friendly-errors-webpack-plugin** 插件在 [done 钩子](https://webpack.js.org/api/compiler-hooks/#done) 执行时打印的，所以给它和 **ProgressPlugin** 插件的 **done 钩子** 都打上断点看下是怎么个执行顺序：
 
-![100% 进度丢失的问题](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/plugin_order_bug.png)
+![100% 进度丢失的问题](imgs/plugin_order_bug.png)
 
 可以看到 **100%** 这条进度其实是存在的，只不过打印完就清空了，就像丢了一样。出现这个问题的原因就是： **ProgressPlugin** 正在同一行上不断刷进度呢，这时 **@soda/friendly-errors-webpack-plugin** 半路窜出来跳到下一屏打印了几行日志导致屏幕和光标位置都变化了，这样就无法清空之前的进度了，导致 **98%** 这条日志残留了下来。
 
@@ -418,7 +418,7 @@ module.exports = {
 
 这里直接把它排在 [vue-loader](https://www.npmjs.com/package/vue-loader) 之前，也就是所有插件的头上，可以避免被其他还没发现的插件影响。
 
-![修复 100% 进度丢失的问题](https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/plugin_order_bug_fixed.png)
+![修复 100% 进度丢失的问题](imgs/plugin_order_bug_fixed.png)
 
 说实话，这本该是 **@vue/cli-service** 要做的事，但它却只是简单地 [在最后添加进度条插件](https://github.com/vuejs/vue-cli/blob/v5.0.8/packages/%40vue/cli-service/lib/commands/serve.js#L71-L73) 就不管顺序了，最新的 **@vue/cli-service@5.0.8** 也是靠 [progress-webpack-plugin](https://www.npmjs.com/package/progress-webpack-plugin) 插件自身去 [屏蔽](https://github.com/ali322/progress-webpack-plugin/blob/ddb380f2084ab0920853dc9daf5755cfb136f81f/index.js#L56-L60) 这个问题。不过目前 [Vue CLI](https://github.com/vuejs/vue-cli#%EF%B8%8F-status) 已经处于维护阶段，新项目都推荐用 [Vite](https://github.com/vitejs/vite) 了，也不指望它去修复了。
 

@@ -1,0 +1,16 @@
+{
+  "plugins": {
+    "jianshu": {
+      "images": {
+        "imgs/bug.png": "https://upload-images.jianshu.io/upload_images/1836534-d45f1ebabe2c40fb.gif",
+        "imgs/bug_fixed.png": "https://upload-images.jianshu.io/upload_images/1836534-b7c4a622d9026ecb.gif",
+        "imgs/cover.gif": "https://upload-images.jianshu.io/upload_images/1836534-4fe0b5a78c6d35fa.gif",
+        "imgs/debug_CSI.gif": "https://upload-images.jianshu.io/upload_images/1836534-f93c25c6aba5fcc7.gif",
+        "imgs/debug_nodeConsole.png": "https://upload-images.jianshu.io/upload_images/1836534-dcb98563af4be289.gif",
+        "imgs/plugin_order_bug.png": "https://upload-images.jianshu.io/upload_images/1836534-1766324555b0e41f.gif",
+        "imgs/plugin_order_bug_fixed.png": "https://upload-images.jianshu.io/upload_images/1836534-2c3e51e6a44aef55.gif",
+        "imgs/webpackbar.png": "https://upload-images.jianshu.io/upload_images/1836534-cb180bc038ff7a36.gif"
+      }
+    }
+  }
+}
