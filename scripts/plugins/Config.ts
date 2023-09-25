@@ -6,12 +6,21 @@ import type { PluginConfig } from './types';
 
 const logger = createLogger('config', 'yellow');
 
+export interface ConfigData {
+  plugins: Record<string, PluginConfig | undefined>;
+
+  /**
+   * Ignore specified plugins
+   */
+  ignore?: string[];
+}
+
 export default class Config {
   private readonly file;
 
   private readonly shortPath;
 
-  private _data?: { plugins: Record<string, PluginConfig | undefined> };
+  private _data?: ConfigData;
 
   get data() {
     if (!this._data) {
@@ -49,5 +58,9 @@ export default class Config {
       item = plugins[name] = defaultValue;
     }
     return item;
+  }
+
+  isPluginIgnored(name: string) {
+    return !!this.data.ignore?.includes(name);
   }
 }

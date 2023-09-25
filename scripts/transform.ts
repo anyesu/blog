@@ -28,7 +28,7 @@ export async function transform(file: string) {
   const images = resolveMarkdownImages(markdown);
 
   for (const plugin of plugins) {
-    if (!plugin.enabled) {
+    if (!plugin.enabled || config.isPluginIgnored(plugin.name)) {
       plugin.logger.debug('skip');
       return;
     }
