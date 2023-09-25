@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "jianshu": {
+      "images": {
+        "https://user-images.githubusercontent.com/583075/177045234-cf9fe6c9-2447-469a-8457-85494a505f7c.png": "https://upload-images.jianshu.io/upload_images/1836534-d1ce8f9bb007a784.gif",
+        "imgs/reproduction.gif": "https://upload-images.jianshu.io/upload_images/1836534-3cbdf2336066d5ae.gif"
+      }
+    }
+  }
+}

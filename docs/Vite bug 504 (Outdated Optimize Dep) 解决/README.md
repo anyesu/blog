@@ -379,7 +379,7 @@ index 1bc8674..092f4e0 100644
 
 [点击此处查看 demo](https://stackblitz.com/edit/vitejs-vite-imqoo8?file=vite.config.js)
 
-![vite-bug](https://user-images.githubusercontent.com/48339798/265401488-17e60cba-c505-4166-ac80-319d99abb61f.gif)
+![vite-bug](imgs/reproduction.gif)
 
 ```shell
 pnpm i
