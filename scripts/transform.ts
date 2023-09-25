@@ -57,10 +57,13 @@ if (esMain(import.meta)) {
       }
 
       const ext = options.ext.split(',').filter(Boolean).join('|');
-      const entries = globbySync(globs, {
-        ignore: [`**/*.!(${ext})`, '**/.cache/**'],
-        absolute: true,
-      });
+      const entries = globbySync(
+        globs.map((glob) => glob.replace('(', '\\(')),
+        {
+          ignore: [`**/*.!(${ext})`, '**/.cache/**', '**/node_modules/**'],
+          absolute: true,
+        },
+      );
 
       if (entries.length === 0) {
         logger.error(outdent`
