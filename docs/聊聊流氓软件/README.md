@@ -165,7 +165,7 @@ Windows Registry Editor Version 5.00
 
 最方便的开机启动方式，适合普通用户。
 
-> **注意**
+> [!IMPORTANT]
 >
 > 需要 **管理员权限** 运行的程序放这里是无法开机启动的。
 

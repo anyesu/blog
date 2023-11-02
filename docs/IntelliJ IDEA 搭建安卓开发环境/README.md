@@ -413,7 +413,7 @@ Path=%ANDROID_SDK_ROOT%\platform-tools;%Path%
 
   安装完成就可以继续新建项目了（ 随便建一个 **Basic Activity** 的手机项目 ）。
 
-  > **注意：**
+  > [!WARNING]
   >
   > **Android 31** 依赖：（ [参考](https://blog.csdn.net/z736248591/article/details/121115431) ）
   >
