@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "jianshu": {
+      "images": {
+        "imgs/cover.png": "https://upload-images.jianshu.io/upload_images/1836534-8dcbce50f09c997d.gif",
+        "imgs/curl_v.png": "https://upload-images.jianshu.io/upload_images/1836534-46e9a8ef5f565308.gif",
+        "imgs/jianshu_ipv6.png": "https://upload-images.jianshu.io/upload_images/1836534-3197fb79ae80f7e9.gif"
+      }
+    }
+  }
+}
