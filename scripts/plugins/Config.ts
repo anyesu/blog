@@ -1,7 +1,7 @@
 import jsonfile from 'jsonfile';
 import prettier from 'prettier';
-import { getShortPath, writeFileIfChanged } from '@utils/fs';
-import { createLogger } from '@utils/logger';
+import { getShortPath, writeFileIfChanged } from '@/utils/fs';
+import { createLogger } from '@/utils/logger';
 import type { PluginConfig } from './types';
 
 const logger = createLogger('config', 'yellow');

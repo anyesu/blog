@@ -1,6 +1,6 @@
 import { Buffer } from 'node:buffer';
 import { Readable } from 'node:stream';
-import type { MarkdownImage } from '@utils/types';
+import type { MarkdownImage } from '@/utils/types';
 import Config from './Config';
 
 export type UploadFile = Promise<Readable | Buffer>;

@@ -13,8 +13,7 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "paths": {
-      "@plugins/*": ["./scripts/plugins/*"],
-      "@utils/*": ["./scripts/utils/*"]
+      "@/*": ["./scripts/*"]
     }
   },
   "include": ["scripts/**/*.ts"]

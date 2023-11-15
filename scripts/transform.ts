@@ -6,11 +6,11 @@ import esMain from 'es-main';
 import { globbySync } from 'globby';
 import logUpdate from 'log-update';
 import outdent from 'outdent';
-import Config from '@plugins/Config';
-import JianShuPlugin from '@plugins/JianShuPlugin';
-import { getShortPath } from '@utils/fs';
-import { createLogger, setLogLevel } from '@utils/logger';
-import { resolveMarkdownImages } from '@utils/markdown';
+import Config from '@/plugins/Config';
+import JianShuPlugin from '@/plugins/JianShuPlugin';
+import { getShortPath } from '@/utils/fs';
+import { createLogger, setLogLevel } from '@/utils/logger';
+import { resolveMarkdownImages } from '@/utils/markdown';
 
 const logger = createLogger('transform', 'greenBright');
 

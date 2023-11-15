@@ -3,10 +3,10 @@ import path from 'node:path';
 import axios from 'axios';
 import { consola } from 'consola';
 import { getUri } from 'get-uri';
-import { useIpv4First } from '@utils/dns';
-import { getShortPath, writeFileIfChanged } from '@utils/fs';
-import { createLogger } from '@utils/logger';
-import { MARKDOWN_IMAGE_REGEX } from '@utils/markdown';
+import { useIpv4First } from '@/utils/dns';
+import { getShortPath, writeFileIfChanged } from '@/utils/fs';
+import { createLogger } from '@/utils/logger';
+import { MARKDOWN_IMAGE_REGEX } from '@/utils/markdown';
 import type {
   BaseOptions,
   PluginConfig,

@@ -1,7 +1,7 @@
 import path from 'node:path';
 import axios from 'axios';
 import FormData from 'form-data';
-import { useIpv4First, useIpv6First } from '@utils/dns';
+import { useIpv4First, useIpv6First } from '@/utils/dns';
 import BasePlugin from './BasePlugin';
 import type { BaseOptions, UploadFile, UploadFileContext, UploadFileResult } from './types';
 
