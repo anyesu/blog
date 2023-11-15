@@ -11,7 +11,7 @@ export interface UploadFileContext {
 }
 
 export interface UploadFileResult {
-  url: string;
+  url?: string;
 }
 
 export interface TransformOptions {

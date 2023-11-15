@@ -3,6 +3,7 @@ import path from 'node:path';
 import axios from 'axios';
 import { consola } from 'consola';
 import { getUri } from 'get-uri';
+import { isRemoteUrl } from '@/utils';
 import { useIpv4First } from '@/utils/dns';
 import { getShortPath, writeFileIfChanged } from '@/utils/fs';
 import { createLogger } from '@/utils/logger';
@@ -16,14 +17,13 @@ import type {
   UploadFileResult,
 } from './types';
 
-const isRemoteUrl = (url: string) => url.startsWith('http');
 const USER_AGENT =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36';
 axios.defaults.headers['User-Agent'] = USER_AGENT;
 
 useIpv4First(); // use ipv4 default
 
-export default abstract class BasePlugin<Options extends BaseOptions> {
+export default abstract class BasePlugin<Options extends BaseOptions = BaseOptions> {
   protected options = {} as Options;
 
   abstract readonly name: string;
@@ -60,6 +60,10 @@ export default abstract class BasePlugin<Options extends BaseOptions> {
       this.logger.debug(`upload: "${shortPath}" ...`);
       const uploadFile = await this.uploadFile({ baseDir, url });
       newUrl = uploadFile.url;
+      if (!newUrl) {
+        this.logger.debug(`skip: "${shortPath}"`);
+        return;
+      }
       config.images = { ...config.images, [url]: newUrl };
       this.logger.success(`upload: "${shortPath}" -> "${newUrl}"`);
     }
@@ -86,7 +90,7 @@ export default abstract class BasePlugin<Options extends BaseOptions> {
     await config.save();
 
     if (hasError) {
-      this.logger.fail(`skip transform "${shortPath}"`);
+      this.logger.fail(`some errors occurred when transform "${shortPath}" , try again`);
       return;
     }
 
@@ -94,12 +98,14 @@ export default abstract class BasePlugin<Options extends BaseOptions> {
     const msg = `transform: "${shortPath}" -> "${getShortPath(newFile)}"`;
     this.logger.debug(msg);
     const content = markdown.replace(MARKDOWN_IMAGE_REGEX, (raw, alt, url, title) => {
-      const newUrl = pluginConfig.images![url];
+      const newUrl = pluginConfig.images?.[url] || url;
       return `![${alt}](${newUrl}${title ? ` ${title}` : ''})`;
     });
     const saved = await writeFileIfChanged(newFile, content);
     if (saved) {
       this.logger.success(msg);
     }
+
+    return !hasError;
   }
 }

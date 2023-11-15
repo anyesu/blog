@@ -3,18 +3,29 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import cac from 'cac';
 import esMain from 'es-main';
+import GitUrlParse from 'git-url-parse';
 import { globbySync } from 'globby';
 import logUpdate from 'log-update';
 import outdent from 'outdent';
-import Config from '@/plugins/Config';
-import JianShuPlugin from '@/plugins/JianShuPlugin';
+import { repository } from '@package-json';
+import { BasePlugin, Config, GithubCdnPlugin, JianShuPlugin } from '@/plugins';
 import { getShortPath } from '@/utils/fs';
 import { createLogger, setLogLevel } from '@/utils/logger';
 import { resolveMarkdownImages } from '@/utils/markdown';
 
 const logger = createLogger('transform', 'greenBright');
 
-const plugins = [new JianShuPlugin()];
+function loadPlugins() {
+  const plugins: BasePlugin[] = [new JianShuPlugin()];
+  try {
+    const { owner, name: repo } = GitUrlParse(repository.url);
+    const branch = (repository as any).branch || 'main';
+    plugins.push(new GithubCdnPlugin('github-issue', { owner, repo, branch }));
+  } catch {
+    // ignore
+  }
+  return plugins;
+}
 
 export async function transform(file: string) {
   const shortPath = getShortPath(file);
@@ -27,10 +38,10 @@ export async function transform(file: string) {
   const markdown = readFileSync(file, 'utf8');
   const images = resolveMarkdownImages(markdown);
 
-  for (const plugin of plugins) {
+  for (const plugin of loadPlugins()) {
     if (!plugin.enabled || config.isPluginIgnored(plugin.name)) {
       plugin.logger.debug('skip');
-      return;
+      continue;
     }
     await plugin.transform({ baseDir, filename, ext, shortPath, config, markdown, images });
   }

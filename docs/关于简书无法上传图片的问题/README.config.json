@@ -1,5 +1,12 @@
 {
   "plugins": {
+    "github-issue": {
+      "images": {
+        "imgs/cover.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/关于简书无法上传图片的问题/imgs/cover.png",
+        "imgs/curl_v.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/关于简书无法上传图片的问题/imgs/curl_v.png",
+        "imgs/jianshu_ipv6.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/关于简书无法上传图片的问题/imgs/jianshu_ipv6.png"
+      }
+    },
     "jianshu": {
       "images": {
         "imgs/cover.png": "https://upload-images.jianshu.io/upload_images/1836534-8dcbce50f09c997d.gif",

@@ -9,11 +9,13 @@
     "module": "esnext",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "suppressImplicitAnyIndexErrors": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "paths": {
-      "@/*": ["./scripts/*"]
+      "@/*": ["./scripts/*"],
+      "@package-json": ["./package.json"]
     }
   },
   "include": ["scripts/**/*.ts"]
