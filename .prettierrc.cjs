@@ -6,7 +6,6 @@ module.exports = {
   endOfLine: 'lf',
   plugins: [
     'prettier-plugin-packagejson',
-    'prettier-plugin-sort-json',
     '@ianvs/prettier-plugin-sort-imports',
     './scripts/prettierWatchConfigPlugin.cjs',
   ],
@@ -18,6 +17,12 @@ module.exports = {
         embeddedLanguageFormatting: 'off',
         // fix table's style in markdown
         proseWrap: 'preserve',
+      },
+    },
+    {
+      files: 'docs/**/*.config.json',
+      options: {
+        plugins: ['prettier-plugin-sort-json'],
       },
     },
   ],
