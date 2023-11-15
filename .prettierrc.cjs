@@ -22,6 +22,7 @@ module.exports = {
     {
       files: 'docs/**/*.config.json',
       options: {
+        parser: 'json-stringify',
         plugins: ['prettier-plugin-sort-json'],
       },
     },
