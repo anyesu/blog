@@ -497,7 +497,7 @@
 
   官方提供的查看 **IDE 索引** 的插件，虽然看不懂。
 
-  > **View -> Tool Windows -> Indexes ( Indices ) **
+  > **View -> Tool Windows -> Indexes ( Indices )**
 
 - [IntelliJ IDEA Help](https://plugins.jetbrains.com/plugin/10260-intellij-idea-help)
 
