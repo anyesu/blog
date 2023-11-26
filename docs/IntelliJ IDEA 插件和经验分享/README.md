@@ -179,11 +179,110 @@
 
   相关： [一键查看 Java 字节码以及其他类信息](https://www.cnblogs.com/javaguide/p/13810777.html)
 
-- [JRebel and XRebel for IntelliJ](https://plugins.jetbrains.com/plugin/4441-jrebel-and-xrebel-for-intellij)
+- [JRebel and XRebel](https://plugins.jetbrains.com/plugin/4441-jrebel-and-xrebel)
 
-  **Java 热部署插件** ，大部分场景下修改了代码只要 `Ctrl + B` 编译下代码就即时生效了，无需频繁重启项目。比起 **SpringBoot** 的 **devtools** 好用多了。 **另外，不建议开启自动编译，很消耗性能。**
+  **Java 热部署插件** ，大部分场景下修改了代码（ 比如修改方法名 ）只要 `Ctrl + B` 编译下代码就即时生效了，无需频繁重启项目。比起 **SpringBoot** 的 **devtools** 好用多了。 **另外，不建议开启自动编译，很消耗性能。**
 
-  [安装教程](http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/jrebel-setup.html) [破解教程](https://www.hexianwei.com/2019/07/10/jrebel%E6%BF%80%E6%B4%BB)
+  - [x] [激活教程](https://blog.csdn.net/chirp_CQ/article/details/128483587)
+
+    - **删掉用户名目录下的 `.jrebel` 目录**
+
+      ```powershell
+      # Windows
+      rd /s /q "%USERPROFILE%/.jrebel"
+      # Unix
+      rm -rf ~/.jrebel
+      ```
+
+    - **JRebel and XRebel 插件需要下载安装 [2022.4.1](https://plugins.jetbrains.com/plugin/4441-jrebel-and-xrebel/versions/stable/245481) 版本**
+
+    - **拼接用于激活的 URL**
+
+      - [https://jrebel.qekang.com/{GUID}](https://jrebel.qekang.com)
+      - [http://jrebel-license.jiweichengzhu.com/{GUID}](http://jrebel-license.jiweichengzhu.com)
+
+    - [GUID 在线生成器](https://www.guidgen.com)
+
+  - [ ] 禁止打印 **JRebel** 启动 **banner** （ [参考](https://stackoverflow.com/a/24826274) ）
+
+    ```
+    2022-11-11 11:11:11 JRebel:  Starting logging to file: /Users/test/.jrebel/jrebel.log
+    2022-11-11 11:11:11 JRebel:
+    2022-11-11 11:11:11 JRebel:  #############################################################
+    2022-11-11 11:11:11 JRebel:
+    2022-11-11 11:11:11 JRebel:  JRebel Agent 2022.4.1 (202210311152)
+    2022-11-11 11:11:11 JRebel:  (c) Copyright 2007-2022 Perforce Software, Inc.
+    2022-11-11 11:11:11 JRebel:
+    2022-11-11 11:11:11 JRebel:  Over the last 1 days JRebel prevented
+    2022-11-11 11:11:11 JRebel:  at least 0 redeploys/restarts saving you about 0 hours.
+    2022-11-11 11:11:11 JRebel:
+    2022-11-11 11:11:11 JRebel:  UNABLE TO INITIALIZE LICENSING - NO LICENSE FOUND
+    2022-11-11 11:11:11 JRebel:
+    2022-11-11 11:11:11 JRebel:  If you think this is an error, contact support@jrebel.com.
+    2022-11-11 11:11:11 JRebel:
+    2022-11-11 11:11:11 JRebel:
+    2022-11-11 11:11:11 JRebel:  #############################################################
+    ```
+
+    向配置文件中添加配置项 `rebel.log.stdout=false`
+
+    ```powershell
+    # Windows
+    echo rebel.log.stdout=false>> "%USERPROFILE%/.jrebel/jrebel.properties"
+    # Unix
+    echo rebel.log.stdout=false >> ~/.jrebel/jrebel.properties
+    ```
+
+  - [ ] 禁止上传用户数据
+
+    > **Settings -> JRebel and XRebel -> JRebel Advanced -> Disable reporting**
+
+  **在用 Gradle 构建的项目中，需要配置额外的 Gradle 插件 - [JRebel Gradle plugin](https://manuals.jrebel.com/jrebel/standalone/gradle.html) 。**
+
+  因为要在项目中启用 **JRebel** 的关键是需要 `rebel.xml` 这个配置文件，然而 **JRebel IDEA 插件** 自动生成的配置文件（ `src/main/resources/rebel.xml` ）中 **classpath** 配置项往往是错的，所以需要用 **Gradle** 插件来手动指定路径。
+
+  > 比如 [IDEA 插件项目](https://plugins.jetbrains.com/docs/intellij/creating-plugin-project.html) 中实际生效的代码不是源码编译后的 `main` 目录而是进一步打过补丁的 `main-instrumented` 目录。所以不配置 **JRebel Gradle plugin** 的话，会发现 **IDEA 插件** 中的一些 **UI 界面** 反而挂了，这是因为一些代码是根据注解自动生成的。
+
+  官网中这个 **Gradle** 插件的 [用法说明和示例](https://manuals.jrebel.com/jrebel/standalone/gradle-advanced.html) 很简陋，试了很久才成功：
+
+  ```groovy
+  buildscript {
+      repositories {
+          maven {
+              url "https://plugins.gradle.org/m2/"
+          }
+      }
+      dependencies {
+          classpath "org.zeroturnaround:gradle-jrebel-plugin:1.2.0"
+      }
+  }
+
+  if (Boolean.getBoolean("enableJRebel")) {
+      plugins.apply 'org.zeroturnaround.gradle.jrebel'
+
+      // ref: https://manuals.jrebel.com/jrebel/standalone/gradle-advanced.html
+      rebel {
+          classpath {
+              // don't add the default classes target directory [main]
+              omitDefaultClassesDir = true
+
+              resource {
+                  // the real classes target directory is [main-instrumented]
+                  directory = "build/classes/java/main-instrumented"
+              }
+          }
+      }
+
+      // ref: https://manuals.jrebel.com/jrebel/standalone/gradle-advanced.html#duplicate-rebel-xml-since-gradle-7-x
+      processResources.duplicatesStrategy = DuplicatesStrategy.INCLUDE
+  }
+  ```
+
+  由于只需要在 **debug** 的时候启用 **JRebel** ，而打包项目的时候不需要，所以我加了一个 **JVM 参数** （ `-DenableJRebel=true` ）按需启用插件即可。（ [参考](https://github.com/anyesu/intellij-awesome-console/commit/0a9720f55261db66a502332c948c43b2058f0b83) ）
+
+  ```shell
+  gradlew runIde -DenableJRebel=true
+  ```
 
 - [Lombok](https://plugins.jetbrains.com/plugin/6317-lombok)
 
