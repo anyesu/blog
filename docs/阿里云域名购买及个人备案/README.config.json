@@ -1,4 +1,7 @@
 {
+  "ignore": [
+    "jianshu"
+  ],
   "plugins": {
     "jianshu": {
       "images": {
