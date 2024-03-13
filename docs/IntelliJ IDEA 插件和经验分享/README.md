@@ -1039,6 +1039,7 @@
 - [设置忽略部分类编译错误](https://blog.csdn.net/zhyh1986/article/details/46469173)
 - [idea 查看一个类的所有子类以及子类的子类并以层级关系显示](https://blog.csdn.net/qq_35170213/article/details/82953837)
 - [使用 IntelliJ IDEA 查看类的继承关系图形](https://www.cnblogs.com/deng-cc/p/6927447.html)
+- [idea 使用之 单词拼写检查设置 分级管理](https://blog.csdn.net/ql_7256/article/details/130127174)
 
 ---
 
