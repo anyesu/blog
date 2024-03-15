@@ -1,0 +1,14 @@
+{
+  "plugins": {
+    "jianshu": {
+      "images": {
+        "imgs/cover.png": "https://upload-images.jianshu.io/upload_images/1836534-15ed46f82bd5ce9c.gif"
+      }
+    },
+    "github-issue": {
+      "images": {
+        "imgs/cover.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/关于%20pnpm8%20依赖版本安装错误的问题/imgs/cover.png"
+      }
+    }
+  }
+}
