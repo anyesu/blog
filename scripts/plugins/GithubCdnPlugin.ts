@@ -48,7 +48,10 @@ export default class GithubCdnPlugin extends BasePlugin<GithubCdnOptions> {
     if (isRemoteUrl(url)) {
       return {};
     }
-    url = [this.base, getShortPath(baseDir), url].join('/').replace('\\', '/').replace(' ', '%20');
+    url = [this.base, getShortPath(baseDir), url]
+      .join('/')
+      .replaceAll('\\', '/')
+      .replaceAll(' ', '%20');
     return { url };
   }
 }
