@@ -22,9 +22,11 @@
   >
   > **Chrome** `89+` 支持 **阅读清单** ，相当于这个插件的精简版。这个功能目前还比较隐蔽，我也是一次点击收藏时弹出了 **添加到读取列表** 的选项菜单才无意发现的。右键 **书签栏** 可切换是否显示 **阅读清单按钮** （ 新版中合并到 **侧边栏** 里面了 ）。
 
-- [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+- ~~[篡改猴 - Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)~~
 
   > 油猴脚本。只要会前端就可以自行编写用户脚本对浏览的网页做修改（ 美化、去广告等等 ），每个脚本都可以当作是轻量级的 **插件** 。下文会推荐一些我觉得实用的脚本。
+  >
+  > 还是 **暴力猴** 更好用。
 
 - [暴力猴](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)
 
@@ -34,9 +36,21 @@
 
   > 使用快捷键控制浏览器。由于我习惯使用触摸板，只用到 **快速关闭/还原标签页** 的功能，其他功能没有深入使用过。
 
-- [有道词典 Chrome 划词插件](https://chrome.google.com/webstore/detail/%E6%9C%89%E9%81%93%E8%AF%8D%E5%85%B8chrome%E5%88%92%E8%AF%8D%E6%8F%92%E4%BB%B6/eopjamdnofihpioajgfdikhhbobonhbb)
+- ~~[有道词典 Chrome 划词插件](https://chrome.google.com/webstore/detail/%E6%9C%89%E9%81%93%E8%AF%8D%E5%85%B8chrome%E5%88%92%E8%AF%8D%E6%8F%92%E4%BB%B6/eopjamdnofihpioajgfdikhhbobonhbb)~~
 
-  > 用过最好用的一款 **划词翻译** 插件。
+  > ~~曾经用过最好用的一款 **划词翻译** 插件。~~
+
+  > **更新**
+  >
+  > 改版后很难用，转用 **沉浸式翻译** 了。
+
+- [沉浸式翻译](https://immersivetranslate.com)
+
+  > **全网口碑炸裂的双语对照网页翻译插件**
+  >
+  > 你可以完全免费地使用它来实时翻译外语网页，PDF 翻译，EPUB 电子书翻译，视频双语字幕翻译等。
+
+  > **双语同时展现的方式体验确实更好，不用频繁在原文和翻译之间切换。**
 
 - [Awesome Screenshot: Screen Video Recorder](https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj)
 
@@ -52,7 +66,9 @@
 
   > **更新**
   >
-  > **Chrome** `91+` 在最小化按钮的左侧多了一个倒三角按钮，点击它即可打开标签页搜索面板（ `Ctrl + Shift + A` ），支持 **标题关键字搜索** 和显示 **最近关闭的标签页** 。也就是说在新版 **Chrome** 上用不到这个插件了。
+  > **Chrome** `91+` 在最小化按钮的左侧多了一个倒三角按钮，点击它即可打开标签页搜索面板（ `Ctrl + Shift + A` ），支持 **标题关键字搜索** 和显示 **最近关闭的标签页** 。
+  >
+  > 也就是说在新版 **Chrome** 上用不到这个插件了。
 
 - [User-Agent Switcher for Chrome](https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg)
 
@@ -64,7 +80,9 @@
 
 - [草料二维码-快速生码和解码工具](https://chrome.google.com/webstore/detail/%E8%8D%89%E6%96%99%E4%BA%8C%E7%BB%B4%E7%A0%81-%E5%BF%AB%E9%80%9F%E7%94%9F%E7%A0%81%E5%92%8C%E8%A7%A3%E7%A0%81%E5%B7%A5%E5%85%B7/moombeodfomdpjnpocobemoiaemednkg)
 
-  > 虽然新版的 **Chrome** 已经支持生成当前页面的二维码，但这个插件还是必不可少，可以便捷地生码/解码。
+  > 虽然 **Chrome** `85+` 已经支持生成当前页面的二维码，但这个插件还是必不可少，可以便捷地生码/解码。
+  >
+  > - [Chrome 85 新功能汇总：这是一次「讲效率」的更新 - 少数派](https://sspai.com/post/62326)
 
 - [Chrono 下载管理器](https://chrome.google.com/webstore/detail/chrono-download-manager/mciiogijehkdemklbdcbfkefimifhecn)
 
@@ -77,6 +95,19 @@
 - [超级书签](https://www.baiduyun.wiki/tool/bookmark.html)
 
   > 不用安装任何插件，帮你搞定 **显示星号密码** ，**解除网页右键/复制限制** ，**网页自由编辑** ，**下载浏览器扩展** 、 **网页标注** 。
+
+- [Tree Style History - 树形历史](https://chromewebstore.google.com/detail/tree-style-history-%E6%A0%91%E5%BD%A2%E5%8E%86%E5%8F%B2/khcenbpnhbeplojhaolbpldmoppicold)
+
+  > 树状展示浏览器历史。在使用浏览器访问网页时，用户往往会通过点击链接，从一个页面跳转到另一个页面。本扩展通过树状结构展示了这样的跳转关系，从而让用户能够更快地弄清楚自己当时在做什么，访问了什么网站，当时要做的事情是否已经完成。除此核心功能外，还有如下特色：
+  >
+  > 1. 使用右键菜单，快速搜索当前网站，或者链接指向的网站的访问历史。
+  > 2. 树状查看最近关闭的页面。根据关闭页面的时间、是否正常关闭对页面自动分组。批量打开一个分组的全部页面。
+  > 3. 线性查看书签。通常浏览器使用树状结构展示书签；本扩展反其道而行，按照时间和网站重新排序并展示书签，方便查看和整理最新收藏的内容。
+  > 4. 快速切换最近访问的标签页。在弹窗中按照访问时刻倒序排列标签页。
+
+  > **记得把 `缓存保留天数` 设置为 `0` ，这样就不会清除缓存了。**
+  >
+  > **Chrome** 自带的历史记录真的很鸡肋，而且只保留三个月。有了这个插件就可以更好地回顾浏览记录了。
 
 ### 书签类
 
@@ -122,6 +153,10 @@
 
   > 测试网站性能。
 
+- [CORS Unblock](https://chromewebstore.google.com/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino)
+
+  > 一键开启跨域支持，开发测试比较方便。
+
 ### 阅读类
 
 ---
@@ -144,13 +179,17 @@
 
 - [Git Master](https://chrome.google.com/webstore/detail/git-master/klmeolbcejnhefkapdchfhlhhjgobhmo)
 
-  可以算是 **Octotree** 免费版的升级，功能更多，代码树支持 `GitHub` 、 `GitLab` 、 `Gitee` 、 `Gitea` 、 `Gogs` （ [参考](https://github.com/ineo6/git-master/blob/master/README.zh-CN.md) ）。 不过加载有延迟，没有 **Octotree** 丝滑。
+  > 可以算是 **Octotree** 免费版的升级，功能更多，代码树支持 `GitHub` 、 `GitLab` 、 `Gitee` 、 `Gitea` 、 `Gogs` （ [参考](https://github.com/ineo6/git-master/blob/master/README.zh-CN.md) ）。 不过加载有延迟，没有 **Octotree** 丝滑。
 
 - [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
 
   > 为 **GitHub 仓库** 生成目录，可以快速定位文件而不用一级一级地跳转路径了。
   >
   > 类似的插件有 [Sourcegraph](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack) 。
+
+  > **更新**
+  >
+  > **GitHub** 自身已提供目录了，只是仓库首页不显示。
 
 - [Atom File Icons Web](https://chrome.google.com/webstore/detail/atom-file-icons-web/pljfkbaipkidhmaljaaakibigbcmmpnc)
 
@@ -160,9 +199,21 @@
 
   > 在 **GitHub** 上鼠标移动到指定超链接上可以快速预览内容。
 
-- [GitHub 加速](https://chrome.google.com/webstore/detail/github%E5%8A%A0%E9%80%9F/mfnkflidjnladnkldfonnaicljppahpg)
+  > **更新**
+  >
+  > **GitHub** 自身已经支持预览了，只是文档内容没这么详细而已。
+
+- ~~[GitHub 加速](https://chrome.google.com/webstore/detail/github%E5%8A%A0%E9%80%9F/mfnkflidjnladnkldfonnaicljppahpg)~~
 
   > 提供 **GitHub** 镜像站进行访问。
+
+  > **更新**
+  >
+  > 此插件已 [下架](https://github.com/fhefh2015/Fast-GitHub/commit/de2a596e7dbc5cb924ab2405b28d61991b9b995f) ，通过仓库 [Fast-GitHub](https://github.com/fhefh2015/Fast-GitHub/tree/main/zip) 下载安装也没法用了。
+
+- [GitZip for github](https://chromewebstore.google.com/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn)
+
+  > 勾选仓库中指定文件打包下载，而无需下载整个仓库的代码。
 
 ### SEO
 
@@ -319,6 +370,12 @@
 
 - [京东历史价格走势图 by 京价保](https://greasyfork.org/scripts/408238)
 
+### 其他问题
+
 ---
 
-#### 转载请注明出处：[https://www.jianshu.com/p/6fd2c88560a8](https://www.jianshu.com/p/6fd2c88560a8)
+- [x] Chrome 119 更新后控制台无法选中打印的内容（ [已修复](https://stackoverflow.com/q/77463116) ）
+
+---
+
+#### 转载请注明出处： [https://github.com/anyesu/blog/issues/31](https://anyesu.github.io/blog/articles/31)
