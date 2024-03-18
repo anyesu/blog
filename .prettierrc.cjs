@@ -6,8 +6,7 @@ module.exports = {
   endOfLine: 'lf',
   plugins: [
     'prettier-plugin-packagejson',
-    '@ianvs/prettier-plugin-sort-imports',
-    './scripts/prettierWatchConfigPlugin.cjs',
+    './scripts/prettierWatchConfigPlugin.cjs', //
   ],
   overrides: [
     {
@@ -20,19 +19,25 @@ module.exports = {
       },
     },
     {
+      files: 'scripts/**/*.ts',
+      options: {
+        plugins: ['@ianvs/prettier-plugin-sort-imports'],
+        importOrder: [
+          '<BUILTIN_MODULES>', // Node.js built-in modules
+          '<THIRD_PARTY_MODULES>', // Imports not matched by other special words or groups.
+          '@package-json',
+          '^@(/.*)$', // aliases
+          '^[.]', // relative imports
+        ],
+      },
+    },
+    {
       files: 'docs/**/*.config.json',
       options: {
-        parser: 'json-stringify',
+        printWidth: 0, // to always have new lines
         plugins: ['prettier-plugin-sort-json'],
+        jsonRecursiveSort: true,
       },
     },
   ],
-  importOrder: [
-    '<BUILTIN_MODULES>', // Node.js built-in modules
-    '<THIRD_PARTY_MODULES>', // Imports not matched by other special words or groups.
-    '@package-json',
-    '^@(/.*)$', // aliases
-    '^[.]', // relative imports
-  ],
-  jsonRecursiveSort: true,
 };

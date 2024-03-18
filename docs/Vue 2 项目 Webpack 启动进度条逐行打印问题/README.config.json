@@ -1,7 +1,21 @@
 {
   "plugins": {
+    "github-issue": {
+      "images": {
+        "imgs/awesome-console.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/awesome-console.png",
+        "imgs/bug.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/bug.png",
+        "imgs/bug_fixed.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/bug_fixed.png",
+        "imgs/cover.gif": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/cover.gif",
+        "imgs/debug_CSI.gif": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/debug_CSI.gif",
+        "imgs/debug_nodeConsole.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/debug_nodeConsole.png",
+        "imgs/plugin_order_bug.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/plugin_order_bug.png",
+        "imgs/plugin_order_bug_fixed.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/plugin_order_bug_fixed.png",
+        "imgs/webpackbar.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Vue%202%20项目%20Webpack%20启动进度条逐行打印问题/imgs/webpackbar.png"
+      }
+    },
     "jianshu": {
       "images": {
+        "imgs/awesome-console.png": "https://upload-images.jianshu.io/upload_images/1836534-9b481535efb20a68.gif",
         "imgs/bug.png": "https://upload-images.jianshu.io/upload_images/1836534-d45f1ebabe2c40fb.gif",
         "imgs/bug_fixed.png": "https://upload-images.jianshu.io/upload_images/1836534-b7c4a622d9026ecb.gif",
         "imgs/cover.gif": "https://upload-images.jianshu.io/upload_images/1836534-4fe0b5a78c6d35fa.gif",
@@ -9,8 +23,7 @@
         "imgs/debug_nodeConsole.png": "https://upload-images.jianshu.io/upload_images/1836534-dcb98563af4be289.gif",
         "imgs/plugin_order_bug.png": "https://upload-images.jianshu.io/upload_images/1836534-1766324555b0e41f.gif",
         "imgs/plugin_order_bug_fixed.png": "https://upload-images.jianshu.io/upload_images/1836534-2c3e51e6a44aef55.gif",
-        "imgs/webpackbar.png": "https://upload-images.jianshu.io/upload_images/1836534-cb180bc038ff7a36.gif",
-        "imgs/awesome-console.png": "https://upload-images.jianshu.io/upload_images/1836534-9b481535efb20a68.gif"
+        "imgs/webpackbar.png": "https://upload-images.jianshu.io/upload_images/1836534-cb180bc038ff7a36.gif"
       }
     }
   }

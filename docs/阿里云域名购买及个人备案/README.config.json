@@ -3,46 +3,46 @@
     "jianshu"
   ],
   "plugins": {
-    "jianshu": {
-      "images": {
-        "imgs/domain_aliyun.png": "https://upload-images.jianshu.io/upload_images/1836534-59bc81ec9c35fa09.gif",
-        "imgs/domain_1.png": "https://upload-images.jianshu.io/upload_images/1836534-b7a322e42aa6355e.gif",
-        "imgs/domain_188.png": "https://upload-images.jianshu.io/upload_images/1836534-708accedeff43a70.gif",
-        "imgs/icp_domain_suspended.png": "https://upload-images.jianshu.io/upload_images/1836534-354630077a3f6781.gif",
-        "imgs/ecs_99.png": "https://upload-images.jianshu.io/upload_images/1836534-6f5a6c07ffd7f9c8.gif",
-        "imgs/icp_website_name.png": "https://upload-images.jianshu.io/upload_images/1836534-46490f11d80406e9.gif",
-        "imgs/icp_service_ip.png": "https://upload-images.jianshu.io/upload_images/1836534-ccf83f1398c91fc3.gif",
-        "imgs/icp_dns_disable.png": "https://upload-images.jianshu.io/upload_images/1836534-b4ec18c8bcaf8a2d.gif",
-        "imgs/icp_sms.png": "https://upload-images.jianshu.io/upload_images/1836534-5426e8df1ef386cf.gif",
-        "imgs/icp_sms_verify.png": "https://upload-images.jianshu.io/upload_images/1836534-e4daecc570f9d74b.gif",
-        "imgs/wangan_new_bud_unit.png": "https://upload-images.jianshu.io/upload_images/1836534-deace81900313ce8.gif",
-        "imgs/wangan_bud_unit_add.png": "https://upload-images.jianshu.io/upload_images/1836534-f3bc5f487d16cee0.gif",
-        "imgs/wangan_website_add.png": "https://upload-images.jianshu.io/upload_images/1836534-19505e58d6104182.gif",
-        "imgs/wangan_website_provider.png": "https://upload-images.jianshu.io/upload_images/1836534-96466eabf833e4e1.gif",
-        "imgs/ssl_free_20.png": "https://upload-images.jianshu.io/upload_images/1836534-9cf360a7cfaec5f9.gif",
-        "imgs/ssl_domain_verification.png": "https://upload-images.jianshu.io/upload_images/1836534-9df1be1238dbe2e7.gif",
-        "imgs/cover.png": "https://upload-images.jianshu.io/upload_images/1836534-18d5ff2a6cdf0123.gif"
-      }
-    },
     "github-issue": {
       "images": {
-        "imgs/domain_aliyun.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/domain_aliyun.png",
+        "imgs/cover.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/cover.png",
         "imgs/domain_1.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/domain_1.png",
         "imgs/domain_188.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/domain_188.png",
-        "imgs/icp_domain_suspended.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/icp_domain_suspended.png",
+        "imgs/domain_aliyun.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/domain_aliyun.png",
         "imgs/ecs_99.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/ecs_99.png",
-        "imgs/icp_website_name.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/icp_website_name.png",
-        "imgs/icp_service_ip.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/icp_service_ip.png",
         "imgs/icp_dns_disable.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/icp_dns_disable.png",
+        "imgs/icp_domain_suspended.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/icp_domain_suspended.png",
+        "imgs/icp_service_ip.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/icp_service_ip.png",
         "imgs/icp_sms.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/icp_sms.png",
         "imgs/icp_sms_verify.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/icp_sms_verify.png",
-        "imgs/wangan_new_bud_unit.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/wangan_new_bud_unit.png",
-        "imgs/wangan_bud_unit_add.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/wangan_bud_unit_add.png",
-        "imgs/wangan_website_add.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/wangan_website_add.png",
-        "imgs/wangan_website_provider.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/wangan_website_provider.png",
-        "imgs/ssl_free_20.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/ssl_free_20.png",
+        "imgs/icp_website_name.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/icp_website_name.png",
         "imgs/ssl_domain_verification.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/ssl_domain_verification.png",
-        "imgs/cover.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/cover.png"
+        "imgs/ssl_free_20.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/ssl_free_20.png",
+        "imgs/wangan_bud_unit_add.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/wangan_bud_unit_add.png",
+        "imgs/wangan_new_bud_unit.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/wangan_new_bud_unit.png",
+        "imgs/wangan_website_add.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/wangan_website_add.png",
+        "imgs/wangan_website_provider.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/阿里云域名购买及个人备案/imgs/wangan_website_provider.png"
+      }
+    },
+    "jianshu": {
+      "images": {
+        "imgs/cover.png": "https://upload-images.jianshu.io/upload_images/1836534-18d5ff2a6cdf0123.gif",
+        "imgs/domain_1.png": "https://upload-images.jianshu.io/upload_images/1836534-b7a322e42aa6355e.gif",
+        "imgs/domain_188.png": "https://upload-images.jianshu.io/upload_images/1836534-708accedeff43a70.gif",
+        "imgs/domain_aliyun.png": "https://upload-images.jianshu.io/upload_images/1836534-59bc81ec9c35fa09.gif",
+        "imgs/ecs_99.png": "https://upload-images.jianshu.io/upload_images/1836534-6f5a6c07ffd7f9c8.gif",
+        "imgs/icp_dns_disable.png": "https://upload-images.jianshu.io/upload_images/1836534-b4ec18c8bcaf8a2d.gif",
+        "imgs/icp_domain_suspended.png": "https://upload-images.jianshu.io/upload_images/1836534-354630077a3f6781.gif",
+        "imgs/icp_service_ip.png": "https://upload-images.jianshu.io/upload_images/1836534-ccf83f1398c91fc3.gif",
+        "imgs/icp_sms.png": "https://upload-images.jianshu.io/upload_images/1836534-5426e8df1ef386cf.gif",
+        "imgs/icp_sms_verify.png": "https://upload-images.jianshu.io/upload_images/1836534-e4daecc570f9d74b.gif",
+        "imgs/icp_website_name.png": "https://upload-images.jianshu.io/upload_images/1836534-46490f11d80406e9.gif",
+        "imgs/ssl_domain_verification.png": "https://upload-images.jianshu.io/upload_images/1836534-9df1be1238dbe2e7.gif",
+        "imgs/ssl_free_20.png": "https://upload-images.jianshu.io/upload_images/1836534-9cf360a7cfaec5f9.gif",
+        "imgs/wangan_bud_unit_add.png": "https://upload-images.jianshu.io/upload_images/1836534-f3bc5f487d16cee0.gif",
+        "imgs/wangan_new_bud_unit.png": "https://upload-images.jianshu.io/upload_images/1836534-deace81900313ce8.gif",
+        "imgs/wangan_website_add.png": "https://upload-images.jianshu.io/upload_images/1836534-19505e58d6104182.gif",
+        "imgs/wangan_website_provider.png": "https://upload-images.jianshu.io/upload_images/1836534-96466eabf833e4e1.gif"
       }
     }
   }
