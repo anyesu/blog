@@ -422,6 +422,14 @@ module.exports = {
 
 说实话，这本该是 **@vue/cli-service** 要做的事，但它却只是简单地 [在最后添加进度条插件](https://github.com/vuejs/vue-cli/blob/v5.0.8/packages/%40vue/cli-service/lib/commands/serve.js#L71-L73) 就不管顺序了，最新的 **@vue/cli-service@5.0.8** 也是靠 [progress-webpack-plugin](https://www.npmjs.com/package/progress-webpack-plugin) 插件自身去 [屏蔽](https://github.com/ali322/progress-webpack-plugin/blob/ddb380f2084ab0920853dc9daf5755cfb136f81f/index.js#L56-L60) 这个问题。不过目前 [Vue CLI](https://github.com/vuejs/vue-cli#%EF%B8%8F-status) 已经处于维护阶段，新项目都推荐用 [Vite](https://github.com/vitejs/vite) 了，也不指望它去修复了。
 
+### 补充
+
+---
+
+之前因为 [Awesome Console](https://github.com/anthraxx/intellij-awesome-console) 插件对中文没做处理，日志高亮效果有点糟糕， [修复后](https://github.com/anyesu/intellij-awesome-console) 的效果是下面这样的。（ [参考](https://github.com/anthraxx/intellij-awesome-console/issues/46) ）
+
+![Awesome Console](imgs/awesome-console.png)
+
 ### 最后
 
 ---
