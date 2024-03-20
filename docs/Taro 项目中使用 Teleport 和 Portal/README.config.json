@@ -1,0 +1,20 @@
+{
+  "plugins": {
+    "github-issue": {
+      "images": {
+        "imgs/cover.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Taro%20项目中使用%20Teleport%20和%20Portal/imgs/cover.png",
+        "imgs/demo_react.gif": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Taro%20项目中使用%20Teleport%20和%20Portal/imgs/demo_react.gif",
+        "imgs/demo_vue.gif": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Taro%20项目中使用%20Teleport%20和%20Portal/imgs/demo_vue.gif",
+        "imgs/wechat_devtools_bug.gif": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/Taro%20项目中使用%20Teleport%20和%20Portal/imgs/wechat_devtools_bug.gif"
+      }
+    },
+    "jianshu": {
+      "images": {
+        "imgs/cover.png": "https://upload-images.jianshu.io/upload_images/1836534-b90101e424e18a42.gif",
+        "imgs/demo_react.gif": "https://upload-images.jianshu.io/upload_images/1836534-ff113bdbb1d04df9.gif",
+        "imgs/demo_vue.gif": "https://upload-images.jianshu.io/upload_images/1836534-c06b36bdfd39d727.gif",
+        "imgs/wechat_devtools_bug.gif": "https://upload-images.jianshu.io/upload_images/1836534-b8a9a3ba8436a1cc.gif"
+      }
+    }
+  }
+}
