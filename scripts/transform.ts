@@ -6,9 +6,9 @@ import esMain from 'es-main';
 import GitUrlParse from 'git-url-parse';
 import { globbySync } from 'globby';
 import logUpdate from 'log-update';
-import outdent from 'outdent';
+import { outdent } from 'outdent';
 import { repository } from '@package-json';
-import { BasePlugin, Config, GithubCdnPlugin, JianShuPlugin } from '@/plugins';
+import { BasePlugin, Config, GithubCdnPlugin, JianShuPlugin, JueJinPlugin } from '@/plugins';
 import { getShortPath } from '@/utils/fs';
 import { createLogger, setLogLevel } from '@/utils/logger';
 import { resolveMarkdownImages } from '@/utils/markdown';
@@ -16,7 +16,7 @@ import { resolveMarkdownImages } from '@/utils/markdown';
 const logger = createLogger('transform', 'greenBright');
 
 function loadPlugins() {
-  const plugins: BasePlugin[] = [new JianShuPlugin()];
+  const plugins: BasePlugin[] = [new JianShuPlugin(), new JueJinPlugin()];
   try {
     const { owner, name: repo } = GitUrlParse(repository.url);
     const branch = (repository as any).branch || 'main';

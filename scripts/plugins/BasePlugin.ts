@@ -97,15 +97,23 @@ export default abstract class BasePlugin<Options extends BaseOptions = BaseOptio
     const newFile = path.join(baseDir, '.cache', `${filename}_${this.name}${ext}`);
     const msg = `transform: "${shortPath}" -> "${getShortPath(newFile)}"`;
     this.logger.debug(msg);
-    const content = markdown.replace(MARKDOWN_IMAGE_REGEX, (raw, alt, url, title) => {
+    let content = markdown.replace(MARKDOWN_IMAGE_REGEX, (raw, alt, url, title) => {
       const newUrl = pluginConfig.images?.[url] || url;
       return `![${alt}](${newUrl}${title ? ` ${title}` : ''})`;
     });
+
+    content = await this.doTransform(content, pluginConfig);
+
     const saved = await writeFileIfChanged(newFile, content);
     if (saved) {
       this.logger.success(msg);
     }
 
     return !hasError;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  protected async doTransform(content: string, config: PluginConfig) {
+    return content;
   }
 }

@@ -26,6 +26,7 @@ export interface TransformOptions {
 
 export interface BaseOptions {}
 
-export interface PluginConfig {
+export interface PluginConfig<M = any> {
   images?: Record<string, string>;
+  metadata?: M;
 }
