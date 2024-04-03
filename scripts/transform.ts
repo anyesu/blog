@@ -8,6 +8,7 @@ import { globbySync } from 'globby';
 import logUpdate from 'log-update';
 import { outdent } from 'outdent';
 import { repository } from '@package-json';
+import { Syntax } from '@/constants';
 import { BasePlugin, Config, GithubCdnPlugin, JianShuPlugin, JueJinPlugin } from '@/plugins';
 import { getShortPath } from '@/utils/fs';
 import { createLogger, setLogLevel } from '@/utils/logger';
@@ -20,7 +21,8 @@ function loadPlugins() {
   try {
     const { owner, name: repo } = GitUrlParse(repository.url);
     const branch = (repository as any).branch || 'main';
-    plugins.push(new GithubCdnPlugin('github-issue', { owner, repo, branch }));
+    const supportedSyntax = [Syntax.ALERT];
+    plugins.push(new GithubCdnPlugin('github-issue', { owner, repo, branch, supportedSyntax }));
   } catch {
     // ignore
   }

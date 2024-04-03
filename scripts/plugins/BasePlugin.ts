@@ -3,6 +3,7 @@ import path from 'node:path';
 import axios from 'axios';
 import { consola } from 'consola';
 import { getUri } from 'get-uri';
+import { ALERT_TYPES, Syntax } from '@/constants';
 import { isRemoteUrl } from '@/utils';
 import { useIpv4First } from '@/utils/dns';
 import { getShortPath, writeFileIfChanged } from '@/utils/fs';
@@ -29,6 +30,10 @@ export default abstract class BasePlugin<Options extends BaseOptions = BaseOptio
   abstract readonly name: string;
 
   abstract get enabled(): boolean;
+
+  get supportedSyntax(): Syntax[] | undefined {
+    return this.options.supportedSyntax;
+  }
 
   private _logger?: typeof consola;
 
@@ -114,6 +119,18 @@ export default abstract class BasePlugin<Options extends BaseOptions = BaseOptio
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   protected async doTransform(content: string, config: PluginConfig) {
+    return this.doTransformSyntax(content);
+  }
+
+  protected async doTransformSyntax(content: string) {
+    const syntax = this.supportedSyntax || [];
+    if (!syntax.includes(Syntax.ALERT)) {
+      const types = ALERT_TYPES;
+      content = content.replace(
+        new RegExp(`>\\s+\\[!(${Object.keys(types).join('|')})\\]`, 'gi'),
+        (raw, key: string) => `> ${types[key.toUpperCase()]}：`,
+      );
+    }
     return content;
   }
 }

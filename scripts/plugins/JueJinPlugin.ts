@@ -149,6 +149,7 @@ export default class JueJinPlugin extends BasePlugin<JueJinOptions> {
   }
 
   protected async doTransform(content: string, config: PluginConfig<JueJinOptions>) {
+    content = await super.doTransform(content, config);
     const { theme: defaultTheme, highlight: defaultHighlight } = this.options;
     const { theme, highlight } = config.metadata || {};
     const metadata = outdent`
