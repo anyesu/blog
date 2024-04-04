@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "github-issue": {},
+    "jianshu": {},
+    "juejin": {
+      "metadata": {
+        "theme": "channing-cyan"
+      }
+    }
+  }
+}
