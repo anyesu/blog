@@ -1,0 +1,25 @@
+{
+  "plugins": {
+    "github-issue": {
+      "images": {
+        "imgs/run1.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/记一次%20win10%20下的内存泄漏分析/imgs/run1.png",
+        "imgs/run2.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/记一次%20win10%20下的内存泄漏分析/imgs/run2.png",
+        "imgs/run3.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/记一次%20win10%20下的内存泄漏分析/imgs/run3.png"
+      }
+    },
+    "jianshu": {
+      "images": {
+        "imgs/run1.png": "https://upload-images.jianshu.io/upload_images/1836534-0dc993f4d7c0f2f7.png",
+        "imgs/run2.png": "https://upload-images.jianshu.io/upload_images/1836534-2b596f4f38e53ddc.png",
+        "imgs/run3.png": "https://upload-images.jianshu.io/upload_images/1836534-a881c1f1086df724.png"
+      }
+    },
+    "juejin": {
+      "images": {
+        "imgs/run1.png": "https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/693bf138b9364055af5c4aceacce4364~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/run2.png": "https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/02a2714cc81643e58067d0ddfcc9163d~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/run3.png": "https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8705361f860f40bdaadf136e8c5dca2d~tplv-k3u1fbpfcp-watermark.image"
+      }
+    }
+  }
+}
