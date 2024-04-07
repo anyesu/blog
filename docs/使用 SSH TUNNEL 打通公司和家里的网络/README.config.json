@@ -1,0 +1,34 @@
+{
+  "plugins": {
+    "github-issue": {
+      "images": {
+        "imgs/cover.jpg": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20SSH%20TUNNEL%20打通公司和家里的网络/imgs/cover.jpg",
+        "imgs/original.jpg": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20SSH%20TUNNEL%20打通公司和家里的网络/imgs/original.jpg",
+        "imgs/ssh_tunnel_single.jpg": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20SSH%20TUNNEL%20打通公司和家里的网络/imgs/ssh_tunnel_single.jpg",
+        "imgs/winscp.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20SSH%20TUNNEL%20打通公司和家里的网络/imgs/winscp.png",
+        "imgs/winscp_proxy.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20SSH%20TUNNEL%20打通公司和家里的网络/imgs/winscp_proxy.png",
+        "imgs/winscp_ssh_tunnel.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20SSH%20TUNNEL%20打通公司和家里的网络/imgs/winscp_ssh_tunnel.png"
+      }
+    },
+    "jianshu": {
+      "images": {
+        "imgs/cover.jpg": "https://upload-images.jianshu.io/upload_images/1836534-13a032857b53013b.jpg",
+        "imgs/original.jpg": "https://upload-images.jianshu.io/upload_images/1836534-a03efb6a7e1bbf60.jpg",
+        "imgs/ssh_tunnel_single.jpg": "https://upload-images.jianshu.io/upload_images/1836534-15beb1a81ce47ee1.jpg",
+        "imgs/winscp.png": "https://upload-images.jianshu.io/upload_images/1836534-b60538f1f39dc036.png",
+        "imgs/winscp_proxy.png": "https://upload-images.jianshu.io/upload_images/1836534-bb687dfdad5b8c09.png",
+        "imgs/winscp_ssh_tunnel.png": "https://upload-images.jianshu.io/upload_images/1836534-2213f58d569747d9.png"
+      }
+    },
+    "juejin": {
+      "images": {
+        "imgs/cover.jpg": "https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/64ce7249dfcb484ca7404c16de8907b1~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/original.jpg": "https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/68da5455599a44cdb764ba67811ee79e~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/ssh_tunnel_single.jpg": "https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6108707481f3404484d06b23c7979c01~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/winscp.png": "https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/01c6d053a3834a35bc9f78a5c3765b0c~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/winscp_proxy.png": "https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d35f9eec7141478298754aae4e545c0b~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/winscp_ssh_tunnel.png": "https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a50af86450b54e69a688182426b88c1f~tplv-k3u1fbpfcp-watermark.image"
+      }
+    }
+  }
+}
