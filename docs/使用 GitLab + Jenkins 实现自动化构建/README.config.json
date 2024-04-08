@@ -1,0 +1,61 @@
+{
+  "plugins": {
+    "github-issue": {
+      "images": {
+        "imgs/cover.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/cover.png",
+        "imgs/git_add_webhook.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/git_add_webhook.png",
+        "imgs/git_commits.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/git_commits.png",
+        "imgs/git_copy_access_token.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/git_copy_access_token.png",
+        "imgs/git_new_access_token.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/git_new_access_token.png",
+        "imgs/git_new_proj.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/git_new_proj.png",
+        "imgs/git_new_tag.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/git_new_tag.png",
+        "imgs/git_pipelines.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/git_pipelines.png",
+        "imgs/git_push_tag.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/git_push_tag.png",
+        "imgs/git_webhook_history.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/git_webhook_history.png",
+        "imgs/jenkins_add_access_token.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/jenkins_add_access_token.png",
+        "imgs/jenkins_add_git_url.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/jenkins_add_git_url.png",
+        "imgs/jenkins_full_configuration.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/jenkins_full_configuration.png",
+        "imgs/jenkins_trigger.png": "https://cdn.jsdelivr.net/gh/anyesu/blog/docs/使用%20GitLab%20+%20Jenkins%20实现自动化构建/imgs/jenkins_trigger.png"
+      }
+    },
+    "jianshu": {
+      "images": {
+        "imgs/cover.png": "https://upload-images.jianshu.io/upload_images/1836534-f5fd5375abcdeb8b.png",
+        "imgs/git_add_webhook.png": "https://upload-images.jianshu.io/upload_images/1836534-92cd6fbd6a3b3233.png",
+        "imgs/git_commits.png": "https://upload-images.jianshu.io/upload_images/1836534-191085accd04b87d.png",
+        "imgs/git_copy_access_token.png": "https://upload-images.jianshu.io/upload_images/1836534-0665ed9d57134a98.png",
+        "imgs/git_new_access_token.png": "https://upload-images.jianshu.io/upload_images/1836534-89e97985a5a28ec9.png",
+        "imgs/git_new_proj.png": "https://upload-images.jianshu.io/upload_images/1836534-b7fb0e702ac91bf0.png",
+        "imgs/git_new_tag.png": "https://upload-images.jianshu.io/upload_images/1836534-2be6c82aaf52dd30.png",
+        "imgs/git_pipelines.png": "https://upload-images.jianshu.io/upload_images/1836534-a9d8b08b975412d0.png",
+        "imgs/git_push_tag.png": "https://upload-images.jianshu.io/upload_images/1836534-93fdf6deb1603c83.png",
+        "imgs/git_webhook_history.png": "https://upload-images.jianshu.io/upload_images/1836534-a3ce947fa3e6e3f2.png",
+        "imgs/jenkins_add_access_token.png": "https://upload-images.jianshu.io/upload_images/1836534-f1df190e5c18649b.png",
+        "imgs/jenkins_add_git_url.png": "https://upload-images.jianshu.io/upload_images/1836534-34fa170acf145a78.png",
+        "imgs/jenkins_full_configuration.png": "https://upload-images.jianshu.io/upload_images/1836534-17d1e6367318a13f.png",
+        "imgs/jenkins_trigger.png": "https://upload-images.jianshu.io/upload_images/1836534-4d3aa4dcfe8b3be8.png"
+      }
+    },
+    "juejin": {
+      "images": {
+        "imgs/cover.png": "https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e4fb3796d31344cb8acd86b77c82518c~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/git_add_webhook.png": "https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b312bf3896fb4b5ba5966cd2661fe210~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/git_commits.png": "https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/039a81b4cb734866ac6a1fade7d10b87~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/git_copy_access_token.png": "https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d405e448ad34f4f80cb6d5ed15225a5~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/git_new_access_token.png": "https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6dff049f0412463aa5ed193bd15aabaa~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/git_new_proj.png": "https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d43562c58d094bf8841ca044c50f5307~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/git_new_tag.png": "https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/259d753668aa443f9bbe0907ddd3114d~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/git_pipelines.png": "https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e6f1342676be4095a374d66e29456d0a~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/git_push_tag.png": "https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a11e1d5561144f088c228e980897d498~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/git_webhook_history.png": "https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3239d2f2c38847b8aacef74b85ff98f8~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/jenkins_add_access_token.png": "https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b7d29020e2e4a4ea0a2c7642b305b55~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/jenkins_add_git_url.png": "https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d4ed9b572ec642d9a931c0cdf1b8b669~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/jenkins_full_configuration.png": "https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2792fe3a33614d92856e63c4b07d7c96~tplv-k3u1fbpfcp-watermark.image",
+        "imgs/jenkins_trigger.png": "https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/43490bc0f552467294fe4634c213f957~tplv-k3u1fbpfcp-watermark.image"
+      },
+      "metadata": {
+        "theme": "channing-cyan"
+      }
+    }
+  }
+}
